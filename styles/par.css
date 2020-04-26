@@ -1,32 +1,26 @@
 body{
 background-color:#0017F2;
-margin: 0;
+font-size: 3;
+overflow-x:hidden;
+display:inline-block;
+margin:0;
 }
 	
 .pr{ 
+	color:white;
 	position: fixed;
 	}
 .pr:hover{
-	transform:scale(10);
 }
 
+
 .img{
-	margin-left: 0px;
-	height: 50vh;
-	background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/db/NGC4676.jpg);
+	margin: 0px;
+	height: 40vh;
+	width: 100%;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/M104_ngc4594_sombrero_galaxy_hi-res.jpg/2880px-M104_ngc4594_sombrero_galaxy_hi-res.jpg);
 	background-attachment: fixed;
 	position: sticky;
 	}
 
-body{
-	width: 100%;
-	overflow-x:hidden;
-}
-.bd{
-	transition: 20s;
-position:relative;
-	}
-.bd:hover{
-	transform:scale(200);
-}
 	
