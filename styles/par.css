@@ -1,0 +1,32 @@
+body{
+background-color:#0017F2;
+margin: 0;
+}
+	
+.pr{ 
+	position: fixed;
+	}
+.pr:hover{
+	transform:scale(10);
+}
+
+.img{
+	margin-left: 0px;
+	height: 50vh;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/db/NGC4676.jpg);
+	background-attachment: fixed;
+	position: sticky;
+	}
+
+body{
+	width: 100%;
+	overflow-x:hidden;
+}
+.bd{
+	transition: 20s;
+position:relative;
+	}
+.bd:hover{
+	transform:scale(200);
+}
+	
