@@ -1,8 +1,11 @@
-	
+body{
+	background-color:white;
+}
 .a{
 	font-family:Helvetica;
 	font-weight:roman;
 	font-size:100px;
+	color:black;
 }
 .b{
 	font-family:Inconsolata;
@@ -10,3 +13,12 @@
 	font-size:20px;
 	color:black; 
 }
+
+.c{
+	background-color:#E13C00;
+	font-family:Inconsolata;
+	font-weight:thin;
+	font-size:20px;
+	color:black; 
+	margin-top: 20px
+	}
