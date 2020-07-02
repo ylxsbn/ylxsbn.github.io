@@ -1,11 +1,12 @@
 	
 .a{
 	font-family:Helvetica;
-	font-weight:bold;
-	font-size:120px;
+	font-weight:roman;
+	font-size:100px;
 }
 .b{
 	font-family:Inconsolata;
-	font-weight:bold;
-	font-size:80px;
+	font-weight:thin;
+	font-size:20px;
+	color:black; 
 }
