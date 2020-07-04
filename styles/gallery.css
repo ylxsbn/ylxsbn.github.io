@@ -1,4 +1,5 @@
 body{
+	-webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
 	background-color: white;
 	margin: 0px;
 	padding: 0px;
@@ -8,13 +9,13 @@ body{
 .video_bg{
 	height: auto;
 	width: 100%;
-	position: absolute;
 	}
 
 .title{
-	position:absolute;
+	position: absolute;
+	left:50vh;
 	font-family:Helvetica;
 	font-weight:roman;
-	font-size:50px;
+	font-size:120px;
 	color:black;
 }
