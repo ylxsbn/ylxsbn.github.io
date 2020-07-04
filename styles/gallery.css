@@ -1,0 +1,20 @@
+body{
+	background-color: white;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	}
+	
+.video_bg{
+	height: auto;
+	width: 100%;
+	position: absolute;
+	}
+
+.title{
+	position:absolute;
+	font-family:Helvetica;
+	font-weight:roman;
+	font-size:50px;
+	color:black;
+}
