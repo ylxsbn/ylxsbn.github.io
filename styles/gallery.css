@@ -9,13 +9,46 @@ body{
 .video_bg{
 	height: auto;
 	width: 100%;
+	z-index: 1;
+	position: absolute;
 	}
 
 .title{
+	z-index: 2;
 	position: absolute;
-	left:50vh;
+	left:40vh;
 	font-family:Helvetica;
 	font-weight:roman;
-	font-size:120px;
+	font-size:140px;
+	color:black;
+	}
+
+.video1{
+	position: sticky;
+	height:15vh;
+	width: 35vh;
+}
+
+.videobox{
+	z-index: 2;
+	position: sticky;
+	left:0vh;
+	opacity: 1;
+	}
+
+.list{
+	z-index: 2;
+	position: absolute;
+	left:7px;
+	top:20vh;
+	font-family:Inconsolata;
+	font-weight:thin;
+	font-size:29px;
 	color:black;
 }
+.ab:visited ~ .videobox{
+	opacity: 1;
+	}
+
+	
+
