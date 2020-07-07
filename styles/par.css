@@ -6,6 +6,11 @@ overflow-x:hidden;
 display:inline-block;
 margin:0;
 }
+
+::selection {
+	background:black;
+	color:#E13C00;	
+}
 	
 .a{
 	font-family:Inconsolata;

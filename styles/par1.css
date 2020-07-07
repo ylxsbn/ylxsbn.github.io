@@ -1,6 +1,13 @@
 body{
 	background-color:white;
 }
+
+::selection {
+	background:black;
+	color:#E13C00;	
+}
+
+
 .a{
 	font-family:Helvetica;
 	font-weight:roman;
