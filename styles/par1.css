@@ -23,7 +23,7 @@ body{
 
 .c{
 	background-color:#E13C00;
-	font-family:Inconsolata;
+	font-family:'Inconsolata', monospace;
 	font-weight:thin;
 	font-size:20px;
 	color:black; 

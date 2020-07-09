@@ -43,7 +43,7 @@ transition: all 2s;
 	}
 
 #list {
-	font-family:Inconsolata;
+	font-family: 'Inconsolata', monospace;
 	font-weight:thin;
 	color:black; 
 	font-size: 25px;
@@ -73,10 +73,10 @@ transition: all 2s;
   cursor: pointer;
   background-color: black;
   color: white;
-  margin-left: 0vh;
+  padding-left: 2vh;
   margin-top: 45vh;
   border:0px;
-  width:10vh;
+  width:15vh;
   display: block;
   transition: all 2s;
   }
@@ -90,22 +90,27 @@ transition: all 2s;
   cursor: pointer;
   background-color: black;
   color: white;
-  margin-left: 0vh;
+  padding-left: 2vh;
   margin-top: 45vh;
   border:0px;
   display: block;
-  width:10vh;
+  width:15vh;
   transition: all 2s;
+  opacity:0;
   }
 
 
 #opBtn:hover {
   background-color: #E13C00;
   color: black;
+  -webkit-user-select:none;
+  filter: blur(2px);
 }
 #clBtn:hover {
   background-color: #E13C00;
   color: black;
+  filter: blur(2px);
+  -webkit-user-select:none;
 }
 
 #Main {
