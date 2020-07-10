@@ -31,5 +31,5 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("opBtn").style.display = "block";
-  setTimeout(bckBtn, 10);
+  setTimeout(bckBtn, 20);
   }
