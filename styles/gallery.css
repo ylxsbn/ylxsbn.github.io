@@ -15,10 +15,10 @@ body{
   position: fixed;
   height: auto;
   width: 100%;
-transition: all 2s;
+  transition: all 2s;
   }
 
-.title {
+#title {
   position: absolute;
   z-index:10;
   font-family:Helvetica;
@@ -29,6 +29,7 @@ transition: all 2s;
   margin-left: 40vh;
   -webkit-user-select:none;
   }
+  
 
 #Sidebar {
   height: 100%;
@@ -52,7 +53,10 @@ transition: all 2s;
 	white-space:nowrap;
 	padding-left:1vh;
 	opacity:0;
+	font-weight:300;
 	}
+	
+	
 
 #Logo{
 	z-index:5;
@@ -62,6 +66,7 @@ transition: all 2s;
 	transition: all 8s;
 	opacity: 0;
 	white-space:nowrap;
+	padding-left:2px;
 	}
 
 #opBtn {
@@ -78,6 +83,7 @@ transition: all 2s;
   border:0px;
   width:15vh;
   display: block;
+  font-weight: 400;
   transition: all 2s;
   }
 
@@ -95,6 +101,7 @@ transition: all 2s;
   border:0px;
   display: block;
   width:15vh;
+  font-weight: 400;
   transition: all 2s;
   opacity:0;
   }
@@ -113,6 +120,11 @@ transition: all 2s;
   -webkit-user-select:none;
 }
 
+#Logo:hover {
+  filter: drop-shadow(100px);
+  -webkit-user-select:none;
+}
+
 #Main {
   transition: all 2s;
 
@@ -120,5 +132,13 @@ transition: all 2s;
   #content{
 	  position:fixed;
   }
+
+.ld{
+	font-size:50px;
+	position:fixed;
+	z-index: -1;
+	font-family: 'Inconsolata';
+	font-weight:300;
 	
+}
 
