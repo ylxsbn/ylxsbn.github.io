@@ -27,9 +27,46 @@ function openNav() {
 }
 
   
-
-
 function closeNav() {
   document.getElementById("opBtn").style.display = "block";
   setTimeout(bckBtn, 20);
   }
+  
+  
+function onBar1() {
+	document.getElementById("fbar").style.transform = "translateY(1vh)";
+	document.getElementById("Bar").style.display = "none";
+}
+
+function onBar2(){ 
+	document.getElementById("sbar").style.transform = "translateY(1vh)";
+document.getElementById("Bar").style.display = "none";
+	}
+
+function onBarA(){
+	document.getElementById("tbar").style.transform = "translateY(1vh)";		
+document.getElementById("Bar").style.display = "none";
+	}  
+ function onBarB(){
+	document.getElementById("fobar").style.transform = "translateY(1vh)";	
+document.getElementById("Bar").style.display = "none";
+	}   
+
+function offBar1() {
+	document.getElementById("fbar").style.transform = "translateY(-12vh)";
+	document.getElementById("Bar").style.display = "block";
+	}
+
+function offBar2(){ 
+	document.getElementById("sbar").style.transform = "translateY(-12vh)";
+document.getElementById("Bar").style.display = "block";
+	}
+
+function offBarA(){
+	document.getElementById("tbar").style.transform = "translateY(-12vh)";		
+document.getElementById("Bar").style.display = "block";
+	}  
+ function offBarB(){
+	document.getElementById("fobar").style.transform = "translateY(-12vh)";	
+document.getElementById("Bar").style.display = "block";
+	}   
