@@ -15,7 +15,7 @@ body{
   width: 90%;
   margin-left:50vh;
   transition: all 2s;
-  z-index: 50;
+  z-index: 1200;
   
   }
 
@@ -24,11 +24,12 @@ body{
   z-index:10;
   font-family:Helvetica;
   font-weight: roman;
-  font-size:50px;
+  font-size:60px;
   color: black;
   padding-bottom: 100vh;
   margin-left: 40vh;
   -webkit-user-select:none;
+  z-index:1200;
   }
   
 
@@ -36,12 +37,12 @@ body{
   height: 100%;
   width: 0vh;
   position: fixed;
-  z-index: 1;
+z-index:1200;
   top: 0;
   left: 0;
   background-color: white; 
   overflow-x: hidden;
-  transition: 2s
+  transition: 2s;
 	}
 
 #list {
@@ -55,12 +56,13 @@ body{
 	padding-left:1vh;
 	opacity:0;
 	font-weight:300;
+	z-index:1200;
 	}
 	
 	
 
 #Logo{
-	z-index:9;
+	z-index:1200;
 	position: absolute;
 	height:20%;
 	width:auto;
@@ -68,7 +70,7 @@ body{
 	}
 
 #opBtn {
-  z-index:1000;
+  z-index:1500;
   position:fixed;
   font-family:Inconsolata;
   font-weight:thin;
@@ -86,7 +88,7 @@ body{
   }
 
   #clBtn {
-  z-index:999;
+  z-index:1200;
   position:fixed;
   font-family:Inconsolata;
   font-weight:thin;
@@ -216,17 +218,24 @@ body{
 	width:200vh;
 	height:100vh;
 	background-color:white;
-	z-index:1;
-	
 }
 
+.text{
+	font-family:Inconsolata ;
+	margin-top:10vh;
+	font-size: 30px;
+	margin-right:90vh;
+	margin-left:1vh;
+	font-weight:light;
+		z-index:24300;
+	}
 
 .empty1, .empty2, .empty3, .empty4{
 	width: 35vh;
 	height: 59vh;
 	position: absolute;
 	top: 124vh;
-	z-index:150;
+	z-index:1200;
 }
 
 .empty1{
@@ -244,4 +253,17 @@ body{
 
 #Logo:hover{
 	filter: invert(100%);
+}
+
+.special {
+	font-family:Messapia;
+	font-weight:bold;
+	filter:drop-shadow(0px 1.4px 2px blue) drop-shadow(0px 1.4px 10px #FF002F);
+	transition: all 2s;
+	z-index:1500;
+	}
+
+.special:hover{
+	filter:drop-shadow(0px 1.4px 2px #FF002F) drop-shadow(0px 1.4px 10px blue);
+	font-family:'Ribes';
 }
