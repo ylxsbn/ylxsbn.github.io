@@ -60,17 +60,32 @@ body{
 	
 
 #Logo{
-	z-index:5;
+	z-index:9;
 	position: absolute;
 	height:20%;
 	width:auto;
-	transition: all 8s;
-	opacity: 0;
-	white-space:nowrap;
-	padding-left:2px;
+	
 	}
 
 #opBtn {
+  z-index:1000;
+  position:fixed;
+  font-family:Inconsolata;
+  font-weight:thin;
+  font-size:25px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding-left: 2vh;
+  margin-top: 45vh;
+  border:0px;
+  width:12vh;
+  display: block;
+  font-weight: 400;
+  transition: all 2s;
+  }
+
+  #clBtn {
   z-index:999;
   position:fixed;
   font-family:Inconsolata;
@@ -82,26 +97,8 @@ body{
   padding-left: 2vh;
   margin-top: 45vh;
   border:0px;
-  width:15vh;
   display: block;
-  font-weight: 400;
-  transition: all 2s;
-  }
-
-  #clBtn {
-  z-index:1000;
-  position:absolute;
-  font-family:Inconsolata;
-  font-weight:thin;
-  font-size:25px;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  padding-left: 2vh;
-  margin-top: 45vh;
-  border:0px;
-  display: block;
-  width:15vh;
+  width:12vh;
   font-weight: 400;
   transition: all 2s;
   opacity:0;
@@ -143,17 +140,12 @@ body{
 	
 }
 
-.catalog {
+#catalog {
 	background-color: #E3E3E3;
 	height: 100vh;
 	padding-top:100vh;
-	}
-
-.titleT{
-	font-family: Helvetica;
-	font-size: 50px;
-	line-height : 30px;
-	margin-top: 50vh;
+	border-radius: 40px;
+	display:block;
 	}
 
 .boldT{
@@ -226,4 +218,30 @@ body{
 	background-color:white;
 	z-index:1;
 	
+}
+
+
+.empty1, .empty2, .empty3, .empty4{
+	width: 35vh;
+	height: 59vh;
+	position: absolute;
+	top: 124vh;
+	z-index:150;
+}
+
+.empty1{
+	left:5vh;
+}
+.empty2{
+	left:42.5vh;
+}
+.empty3{
+	left:80vh;
+}
+.empty4{
+	left:117.5vh;
+}
+
+#Logo:hover{
+	filter: invert(100%);
 }

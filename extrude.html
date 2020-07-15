@@ -3,7 +3,7 @@
 	<head>
 		<link type="text/css" href="styles/extrude.css" rel="stylesheet">
 		<title>ylxsbn</title>
-	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/extrude.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
 	</head>
 		<body>
@@ -24,16 +24,16 @@
 		
 		
 		
-		<div class = "catalog">
+		<div onmouseover = "onCatalog()" onmouseout="offCatalog()" id = "catalog">
 	
-		<div class = "titleT"> <a class = "boldT">extrude<a><br/><a class = "thinT">production<a/></div>
+		<div> <a class = "boldT">extrude<a><br/><a class = "thinT">production<a/></div>
 		
-		<div class = "subtitle">CATALOG</div>
+			<div class = "subtitle">CATALOG</div>
 		
-		<div><p id = "f">Chocolate made from pure cocoa<br/>containing only natural products.<br/>Purity of taste</p><img onmouseover = "onBar1()" onmouseout="offBar1()" id = "fbar" src="images/pure.png"></img></div>
-		<div><p id = "s">The piercing taste of a harmony<br/>of sweet & sour fruit and classic<br/>caramel</p><img onmouseover = "onBar2()" onmouseout="offBar2()" id = "sbar" src="images/pine.png"></img></div>
-		<div><p id = "t">The dazzling experience of<br/>combining sea salt and fresh<br/>red orange</p><img onmouseover = "onBarA()" onmouseout="offBarA()" id = "tbar" src="images/salt.png"></img></div>
-		<div><p id = "fo">Citrus & berry texture<br/>of natural sour, sweetness and<br/>chocolate bitterness<br/></p><img onmouseover = "onBarB()" onmouseout="offBarB()" id = "fobar" src="images/lime.png"></img>	</div>
+				<div onmouseover = "onBar1()" onmouseout="offBar1()" class = "empty1"></div><div><p id = "f">Chocolate made from pure cocoa<br/>containing only natural products.<br/>Purity of taste</p><img id = "fbar" src="images/pure.png"></img></div>
+				<div onmouseover = "onBar2()" onmouseout="offBar2()" class = "empty2"></div><div><p id = "s">The piercing taste of a harmony<br/>of sweet & sour fruit and classic<br/>caramel</p><img id = "sbar" src="images/pine.png"></img></div>
+				<div onmouseover = "onBarA()" onmouseout="offBarA()" class = "empty3"></div><div><p id = "t">The dazzling experience of<br/>combining sea salt and fresh<br/>red orange</p><img id = "tbar" src="images/salt.png"></img></div>
+				<div onmouseover = "onBarB()" onmouseout="offBarB()" class = "empty4"></div><div><p id = "fo">Citrus & berry texture<br/>of natural sour, sweetness and<br/>chocolate bitterness<br/></p><img id = "fobar" src="images/lime.png"></img></div>
 		
 		</div>		
 		
@@ -41,10 +41,10 @@
 		<div id = "Sidebar">	
 			
 			<a href="index.html">
-			<video autoplay muted loop id="Logo" src="videos/acbg.mp4"></video>
+			<video autoplay muted loop id="Logo" src="videos/acbg1.mp4"></video>
 			</a>
 			
-			<a id = "list" href="g1.html">
+			<a id = "list" href="graphics.html">
 			return
 			</a>														
 		</div>
