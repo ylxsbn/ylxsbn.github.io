@@ -1,3 +1,18 @@
+function delEx() {
+document.getElementById("Extrude").style.display = "none";	
+}
+
+
+function ExtrudeA(){	
+document.getElementById("Extrude").style.opacity = "1";	
+	}
+
+function ExtrudeB(){
+document.getElementById("Extrude").style.opacity = "0";
+document.getElementById("Extrude").style.filter = "blur(4px)";
+setTimeout(delEx, 3000);
+}
+
 function bckBtn() {
   document.getElementById("Sidebar").style.width = "0px";
   document.getElementById("opBtn").style.marginLeft = "0vh";
@@ -65,3 +80,6 @@ function offBarB(){
 function onCatalog(){
 	document.getElementById("Bar").style.transform = "translateX(260px)";
 	}
+	
+		setTimeout(ExtrudeA, 0);
+	setTimeout(ExtrudeB, 1200);
