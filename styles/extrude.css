@@ -1,10 +1,11 @@
 html{
 scroll-behavior: smooth;
 }
-
 body{	
 	margin: 0px;
 	padding: 0px;
+	cursor: crosshair;
+	-webkit-font-smoothing: antialiased;	
 	}
 	
 ::selection {
@@ -45,7 +46,7 @@ body{
   background-color: white; 
   overflow-x: hidden;
   transition: 2s;
-	mix-blend-mode: difference;
+  mix-blend-mode: difference;
 	}
 
 #list {
@@ -67,9 +68,9 @@ body{
 #Logo{
 	z-index:1200;
 	position: absolute;
-	height:20%;
-	width:auto;
-	
+	height:auto;
+	width:37vh;
+	 -webkit-user-select:none;
 	}
 
 #opBtn {
@@ -124,10 +125,6 @@ body{
   -webkit-user-select:none;
 }
 
-#Logo:hover {
-  filter: drop-shadow(100px);
-  -webkit-user-select:none;
-}
 
 #Main {
   transition: all 2s;
@@ -150,8 +147,8 @@ body{
 	background-color: #E3E3E3;
 	height: 100vh;
 	padding-top:100vh;
-	border-radius: 40px;
 	display:block;
+	z-index:1206;
 	}
 
 .boldT{
@@ -222,21 +219,20 @@ body{
 	width:200vh;
 	height:100vh;
 	background-color:white;
-    background-image:url(images/drop.svg)
-	}
+}
 
 
 .text{
 	position: absolute;
-	font-family:Inconsolata ;
+	font-family:'Inconsolata';
 	margin-top:10vh;
 	font-size: 30px;
 	margin-right:90vh;
 	margin-left:1vh;
 	font-weight:light;
 	z-index:1204;
-	color:black	;
-	}
+	color:black;
+}
 
 .empty1, .empty2, .empty3, .empty4{
 	width: 35vh;
@@ -267,7 +263,7 @@ body{
 	font-family:Messapia;
 	font-weight:bold;
 	filter:drop-shadow(0px 1.4px 2px white) drop-shadow(0px 1.4px 10px black);
-	transition: all 2s;
+	transition: all 1s;
 	color:white;
 	}
 .special:hover{
@@ -305,4 +301,20 @@ body{
 
 .t{
 	mix-blend-mode: overlay;
+}
+
+
+.center{
+	text-align:center;
+	margin-left:25vh;
+}
+
+#coordinates{
+	position:absolute;
+	z-index:100;
+	font-family:'inconsolata';
+	font-size: 150px;
+	margin-left:50vh;
+	filter:blur(5px);
+	
 }

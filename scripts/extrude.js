@@ -79,7 +79,13 @@ function offBarB(){
 
 function onCatalog(){
 	document.getElementById("Bar").style.transform = "translateX(260px)";
+	document.getElementById("Bar").style.filter = "grayscale(100%)";
 	}
 	
 		setTimeout(ExtrudeA, 0);
 	setTimeout(ExtrudeB, 1200);
+	
+window.addEventListener('mousemove', function (e){
+	
+document.getElementById('coordinates').textContent = `[${ e.x/1000 }, ${ e.y/1000 }]`
+});

@@ -1,0 +1,15 @@
+body{
+	background-color: black;
+}
+
+
+#Grain{
+	z-index:1;
+	position:absolute;
+	opacity: 0.7;
+	mix-blend-mode: difference;
+	}
+.dunkel{
+	position:absolute;
+	z-index:0;
+	}
