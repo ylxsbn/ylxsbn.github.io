@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<link type="text/css" href="styles/gallery.css" rel="stylesheet">
-<title>ylxsbn</title>
-	</head>
-		<body>
-	
-		<div>	
-		<a class="title">WORKS<a/>	
-		<div/>
+<link type="text/css" href="styles/dunkel1.css" rel="stylesheet">
+<title>y</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+	<body>
+	<audio src = "music/horn.mp3" autoplay loop></audio>
+	<canvas></canvas>
+ 	<script src = "scripts/dunkel1.js"  type="text/javascript"></script>
+	 <div class = "title">YLXSBN</div>
 		
-		<a class="videobox">
-		<video class="video1" src="videos/ylxsbn1.mp4" autoplay loop muted><video/>
-		<a/>
-		
-		<a class="list">
-		1.<br/>
-		2.<br/>
-		3.<br/>
-		4.<br/>
-		5.<br/>
-		6.<br/>
-		8.<br/>
-		9.<br/>
-		10.<br/>
-		11.<br/>
-		<a/>
-		
-		
-		<video class="video_bg" src="videos/bg.mp4" autoplay loop muted><video/>
-		
-	
-	</body>
-	
+	 	<div id="panel">
+			<a id = "button1" onmouseover="addCross(1)" onmouseout='deleteCross()'>about</a>\
+			<a id = "button2" onmouseover="addCross(2)" onmouseout='deleteCross()'>works</a>\
+			<a id = "button3" onmouseover="addCross(3)" onmouseout='deleteCross()'>store</a>
+		</div>
+		<script src = "scripts/dragging.js"  type="text/javascript"></script>
+
+		<div id="infobar">
+			<span id = 'mousecords'>[x: undefined, y: undefined];</span><br/><br/>
+			<span id="time">undefined;</span><br/><br/>
+			<span id="os">undefined;</span><br/>
+		</div><script src = "scripts/info.js"  type="text/javascript"></script>
+		<script src = "scripts/dragging.js"  type="text/javascript"></script>
+
+
+		<img id = "mountain" src="images/mountain.png">
+		<img id = "mask" src="images/mask.png">
+		<img id = "star" src="images/star.png">
+
+</body>
 </html>

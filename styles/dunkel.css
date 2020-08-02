@@ -1,15 +1,46 @@
-body{
-	background-color: black;
+
+
+body {
+	margin: 0;
+	background: #4C00FF;
+	image-rendering: pixelated;
+	cursor: crosshair;
 }
 
+canvas {
+	width:100%;
+	height: 100%;
+	filter:  blur(30px) contrast(100%);
+	position: absolute;
+	z-index: 5;
+	display:block;
+}
 
-#Grain{
-	z-index:1;
+@font-face {
+	font-family: "Mazius";
+	src: url("fonts/MaziusRegular.woff") format("woff");
+
+}
+
+.text {
+	font-family: 'Mazius';
+	font-size: 150px;
+	color:#B3FF00;
 	position:absolute;
-	opacity: 0.7;
-	mix-blend-mode: difference;
-	}
-.dunkel{
+	writing-mode: tb-rl;
+	transform:rotate(180deg);
+	filter:drop-shadow(0px 0px 5px #B3FF00);;
+}
+
+.intro {
+	font-family: 'Mazius';
+	font-size: 100px;
+	color:#fe3e02;
 	position:absolute;
-	z-index:0;
-	}
+	left: 10vw;
+	filter:drop-shadow(0px 0px 5px #fe3e02);
+}
+
+.block {
+	top: 15vh;
+}

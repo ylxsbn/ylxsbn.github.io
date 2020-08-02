@@ -85,7 +85,7 @@ function onCatalog(){
 		setTimeout(ExtrudeA, 0);
 	setTimeout(ExtrudeB, 1200);
 	
-window.addEventListener('mousemove', function (e){
-	
-document.getElementById('coordinates').textContent = `[${ e.x/1000 }, ${ e.y/1000 }]`
-});
+	window.addEventListener('mousemove', function (e) {
+		document.getElementById('').textContent = `[${e.x / 1000}, ${e.y / 1000}]`;
+	});
+
