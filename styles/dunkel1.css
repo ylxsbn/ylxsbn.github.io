@@ -87,7 +87,6 @@ canvas {
 } */
 
 #panel {
-	cursor: grab;
 	font-family: 'Space Mono';
 	font-size: 1.5vw;
 	z-index: 12;
