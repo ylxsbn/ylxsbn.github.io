@@ -65,6 +65,16 @@ canvas {
 }
 
 @font-face {
+	font-family: Burtinomatic;
+	src: url("fonts/burtinomatic-webfont.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Sinistre;
+	src: url("fonts/Sinistre.woff") format("woff");
+}
+
+@font-face {
 	font-family: Necto;
 	src: url("fonts/Necto-Mono.woff2") format("woff2");
 }
@@ -87,8 +97,8 @@ canvas {
 } */
 
 #panel {
-	font-family: 'Space Mono';
-	font-size: 1.5vw;
+	font-family: 'Sinistre';
+	font-size: 2vw;
 	z-index: 12;
 	color: #00FF00;
 	position: absolute;
@@ -125,5 +135,5 @@ canvas {
 	align-items: center;
 	justify-content: center;
 	left: 10vw;
-	user-select: none; 
+	user-select: none;
 }
