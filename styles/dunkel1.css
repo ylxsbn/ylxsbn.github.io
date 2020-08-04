@@ -122,18 +122,85 @@ canvas {
 #infobar {
 	cursor: grab;
 	font-family: 'Inconsolata';
-	font-size: 0.7vw;
+	font-size: 12px;
 	z-index: 12;
 	color: #00FF00;
 	position: absolute;
 	text-align: left;
-	width: 25em;
+	width: 300px;
+	height: 100px;
 	display: flex;
-	border: 1px solid #00FF00;
 	filter: drop-shadow(0 0 5px #00FF00);
 	top: 5vh;
 	align-items: center;
 	justify-content: center;
 	left: 10vw;
 	user-select: none;
+	border: 1px solid #00FF00;
+}
+
+.resizer{
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: #00FF00;
+	z-index: 5;
+	cursor: grabbing;
+}
+
+.resizer.lt{
+	top: -1px;
+	left: -1px;
+}
+
+.resizer.rt{
+	top: -1px;
+	right: -1px;
+}
+
+.resizer.bl{
+	bottom: -1px;
+	left: -1px;
+}
+
+.resizer.br{
+	bottom: -1px;
+	right: -1px;
+}
+
+#input {
+	left: 14vw;
+	z-index: 15;
+	position: absolute;
+	top: 18vh;
+	align-items: center;
+	justify-content: center;
+	display: block;
+}
+
+#inputform {
+	position: absolute;
+	width: 5vh;
+	height: 2vh;
+	z-index: 15;
+	color: #00FF00;
+	background: transparent;
+	border: 1px solid #00FF00;
+	filter: drop-shadow(0 0 5px #00FF00);
+	font-family: 'Inconsolata';
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 1em;
+	margin-left: 5px;
+}
+
+.inptitle {
+	color: #00FF00;
+	font-family: 'sinistre';
+	font-size: 1em;
+}
+
+#inputform:focus{
+	outline: none;
+	border: 1px solid #00FF00;
 }

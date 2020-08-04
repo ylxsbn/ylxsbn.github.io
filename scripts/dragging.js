@@ -1,7 +1,6 @@
 var dragObj = document.getElementById('infobar');
 
 dragObj.onmousedown = function(e) {
-
   dragObj.style.position = 'absolute';
   moveAt(e);
 
@@ -10,8 +9,9 @@ dragObj.onmousedown = function(e) {
   dragObj.style.zIndex = 1000;
 
   function moveAt(e) {
-    dragObj.style.left = e.pageX - dragObj.offsetWidth / 2 + 'px';
-    dragObj.style.top = e.pageY - dragObj.offsetHeight / 2 + 'px';
+
+    dragObj.style.left = e.x - dragObj.offsetWidth/2  + 'px';
+    dragObj.style.top = e.y - dragObj.offsetHeight/2 + 'px';
   }
 
   document.onmousemove = function(e) {

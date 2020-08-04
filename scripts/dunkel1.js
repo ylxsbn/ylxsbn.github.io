@@ -5,7 +5,35 @@ canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
 
-var fps = 2;
+const input = document.getElementById("inputform");
+
+window.fps = input.value;
+
+function getFps(){
+window.fps = input.value;
+
+var title = document.querySelector('.title');
+
+if (window.fps > 60){
+    title.textContent ='Be careful';
+}
+if (window.fps > 100) {
+    title.textContent = "Don't do that";
+}
+if (window.fps > 200){
+    title.textContent = 'Goodbye';
+    canvas.style.opacity = "0";
+    title.style.color = '#ff0000';
+    title.style.filter = 'drop-shadow(0 0 5px #ff0000)';
+    setTimeout(closeWindow, 2500);
+}
+
+function closeWindow() {
+    window.open('','_self').close();
+}
+
+
+}
 
 var value = 200;
 
@@ -44,7 +72,7 @@ function draw() {
             
             setTimeout(showMask, 200);   
         }
-    }, 1000/fps);
+    }, 1000/window.fps);
 }
 
 draw();
