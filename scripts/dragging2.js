@@ -12,8 +12,6 @@ function mousedown(e){
 
     function mousemove(e){
       if (!isResizing) {
-
-      
       
         let newX = prevX - e.x;
         let newY = prevY - e.y;
@@ -34,8 +32,12 @@ function mousedown(e){
     }
 }
 
+dragObj.ondragstart = function() {
+  return false;
+};
 
-const rect = dragObj.getBoundingClientRect();
+
+const rect = dragObj.getBoundingClientRect() - 1;
 let isResizing = false;
 
 const resizers = document.querySelectorAll('.resizer');
@@ -78,6 +80,7 @@ for (let resizer of resizers){
 
         prevX = e.x;
         prevY = e.y;
+
       }
 
       function mouseup(e){
@@ -109,6 +112,6 @@ function deleteCross() {
   button.textContent = text;
   panel.style.filter = 'drop-shadow(0 0 5px #00FF00)';
   panel.style.color = '#00FF00';
-  panel.style.border = '1px solid  #00FF00';
+  panel.style.border = '1px solid #00FF00';
   button.style.filter = 'drop-shadow(0 0 0px #ff0000)';
 }
