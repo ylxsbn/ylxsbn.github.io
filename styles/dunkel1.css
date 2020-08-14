@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	background: black;
-	height:100vh;
+	height: 100vh;
 	cursor: url('../icons/star6.png') 48 48,auto;
 	overflow: hidden;
 }
@@ -28,6 +28,7 @@ canvas {
 #mountain, #mask, #star {
 	position: absolute;
 }
+
 
 #mountain{
 	width: 91.3%;
@@ -76,12 +77,12 @@ canvas {
 }
 
 @font-face {
-	font-family: Necto;
-	src: url("fonts/Necto-Mono.woff2") format("woff2");
+	font-family: Testing;
+	src: url("fonts/SpratWarped.woff") format("woff");
 }
 
 .title {
-	font-family: SpratThin;
+	font-family: 'Testing';
 	font-weight: thin;
 	font-size: 5vw;
 	z-index: 10;
@@ -228,4 +229,14 @@ canvas {
 	width: 15vw;
 	height: auto;
 
+}
+
+#background {
+	z-index: 0;
+	pointer-events: none;
+}
+
+#canvasCursor {
+	z-index: 999;
+	pointer-events: none;
 }

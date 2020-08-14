@@ -1,9 +1,13 @@
-var canvas = document.querySelector('canvas');
+var canvas = document.getElementById('background');
+var canvasCursor = document.getElementById('canvasCursor');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+canvasCursor.width = window.innerWidth;
+canvasCursor.height = window.innerHeight;
 
 var c = canvas.getContext('2d');
+var ctxCursor = canvasCursor.getContext('2d');
 
 const input = document.getElementById("inputform");
 
@@ -14,26 +18,56 @@ window.fps = input.value;
 
 var title = document.querySelector('.title');
 
-if (window.fps > 60){
-    title.textContent ='Be careful';
-}
-if (window.fps > 100) {
-    title.textContent = "Don't do that";
-}
-if (window.fps > 200){
-    title.textContent = 'Goodbye';
-    canvas.style.opacity = "0";
-    title.style.color = '#ff0000';
-    title.style.filter = 'drop-shadow(0 0 5px #ff0000)';
-    setTimeout(closeWindow, 2500);
+    if (window.fps > 60){
+        title.textContent ='BE CAREFUL';
+    }
+    if (window.fps > 100) {
+        title.textContent = "DON'T DO THAT";
+    }
+    if (window.fps > 200){
+        title.textContent = 'GOODBYE';
+        canvas.style.opacity = "0";
+        title.style.color = '#ff0000';
+        title.style.filter = 'drop-shadow(0 0 5px #ff0000)';
+        setTimeout(closeWindow, 2500);
+    }
+
+    function closeWindow() {
+        window.open('','_self').close();
+    }
 }
 
-function closeWindow() {
-    window.open('','_self').close();
+window.addEventListener('mousemove', getPos);
+
+var dotX, dotY;
+
+function getPos(e){
+    dotX = e.x;
+    dotY = e.y;
 }
 
+function animateCursor(){
+    setTimeout(function() {  
+    window.requestAnimationFrame(animateCursor);
+    ctxCursor.clearRect(0, 0, innerWidth, innerHeight);
+        for (i = 0; i < 2; i++){
+        let offX = Math.random() * 100 + dotX - 50;
+        let offY = Math.random() * 100 + dotY - 50;
+        let size = 1;
+        
+        ctxCursor.beginPath();
+        ctxCursor.fillStyle = '#00FF00';
 
+            ctxCursor.fillRect(offX, offY, size, size);
+        ctxCursor.fillRect(offX-shift*size, offY, size, size);
+        ctxCursor.fillRect(offX+shift*size, offY, size, size);
+        ctxCursor.fillRect(offX, offY+shift*size, size, size);
+        ctxCursor.fillRect(offX, offY-shift*size, size, size);
+    }
+}, 1000/12);
 }
+
+animateCursor();
 
 var value = 200;
 

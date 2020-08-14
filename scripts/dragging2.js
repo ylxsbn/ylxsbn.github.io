@@ -63,19 +63,23 @@ for (let resizer of resizers){
         if (currentResizer.classList.contains('br')) {
           dragObj.style.width = rect.width - (prevX - e.clientX) + 'px';
           dragObj.style.height = rect.height - (prevY - e.clientY) + 'px';
+          dragObj.style.fontSize = (rect.width - (prevX - e.clientX))/24 + 'px';
         } else if (currentResizer.classList.contains('bl')) {
           dragObj.style.width = rect.width + (prevX - e.clientX) + 'px';
           dragObj.style.height = rect.height - (prevY - e.clientY) + 'px';
           dragObj.style.left = rect.left - (prevX - e.clientX) + 'px';
+          dragObj.style.fontSize = (rect.width - (prevX - e.clientX))/24 + 'px';
         } else if (currentResizer.classList.contains('rt')){
           dragObj.style.width = rect.width - (prevX - e.clientX) + 'px';
           dragObj.style.height = rect.height + (prevY - e.clientY) + 'px';
           dragObj.style.top = rect.top - (prevY - e.y) + 'px';
+          dragObj.style.fontSize = (rect.width - (prevX - e.clientX))/24 + 'px';
         } else {
           dragObj.style.width = rect.width + (prevX - e.clientX) + 'px';
           dragObj.style.height = rect.height + (prevY - e.clientY) + 'px';
           dragObj.style.top = rect.top - (prevY - e.y) + 'px';
           dragObj.style.left = rect.left - (prevX - e.x) + 'px';
+          dragObj.style.fontSize = (rect.width - (prevX - e.clientX))/24 + 'px';
         }
 
         prevX = e.x;
