@@ -1,31 +1,95 @@
+html{
+	cursor: url('../icons/star6.png') 48 48, auto;
+	overflow: hidden;
+}
+
 body{
 	background-color:white;
+	margin: 0vw;
+
 }
 
 ::selection {
-	background:black;
-	color:#E13C00;	
+	color:#00FF00;
+	background:white;
 }
 
+@font-face {
+	font-family: Warped;
+	src: url("fonts/SpratWarped.woff") format("woff");
+}
+
+@font-face {
+	font-family: Sinistre;
+	src: url("fonts/Sinistre.woff") format("woff");
+}
 
 .a{
-	font-family:Helvetica;
-	font-weight:roman;
-	font-size:100px;
-	color:black;
-}
-.b{
-	font-family:Inconsolata;
-	font-weight:thin;
-	font-size:20px;
-	color:black; 
+	font-family: 'Warped';
+	font-weight: roman;
+	font-size: 5vh;
+	color :black;
+	/* writing-mode: tb-rl; */
+	position: absolute;
+	top: 9vh;
+	transform:rotate(-45deg);
+	user-select: none;
 }
 
-.c{
-	background-color:#E13C00;
-	font-family:'Inconsolata', monospace;
-	font-weight:thin;
-	font-size:20px;
-	color:black; 
-	}
-	
+#c{
+	font-family: 'Space Mono', monospace;
+	font-weight: thin;
+	font-size: 1vw;
+	color: black;
+	width: 15vw;
+	top: 2vh;
+	position: fixed;
+	text-align: center;
+	left: 15vw;
+	mix-blend-mode: multiply;
+	border: .1em solid black;
+	transition: filter 1s;
+	user-select: none;
+}
+
+
+#c:hover{
+	filter: drop-shadow(2px 2px 1px #00FF00);
+}
+/* 
+.text1 {
+	filter: drop-shadow(2px 2px 1px #00FF00);
+} */
+
+#panel {
+	color: black;
+	font-family: 'Sinistre';
+	font-size: 2vw;
+	z-index: 12;
+	position: fixed;
+	display: flex;
+	text-align: center;
+	width: 21vw;
+	height: 7vh;
+	border: .05em solid black;
+	top: 5vh;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+	left: 40vw;
+	user-select: none;
+	vertical-align: middle;
+}
+
+#button1, #button2, #button3 {
+	color: black;
+}
+
+.bg {
+	width: 20vw;
+	position: absolute;
+	mix-blend-mode: multiply;
+	height: auto;
+	left: 10vw;
+	top: 10vh;
+}

@@ -1,4 +1,4 @@
-html{
+s{
 scroll-behavior: smooth;
 }
 body{	
@@ -172,7 +172,7 @@ body{
 .subtitle {
   font-family : Misto Regular;
   font-size : 14vh;
-  color : #0d5f47;
+  color : #F24100;
   margin-left:5vh;
   }
 
