@@ -29,7 +29,6 @@ body{
 	font-weight: roman;
 	font-size: 5vh;
 	color :black;
-	/* writing-mode: tb-rl; */
 	position: absolute;
 	top: 9vh;
 	transform:rotate(-45deg);
@@ -42,24 +41,19 @@ body{
 	font-size: 1vw;
 	color: black;
 	width: 15vw;
-	top: 2vh;
 	position: fixed;
 	text-align: center;
-	left: 15vw;
-	mix-blend-mode: multiply;
+	left: 40vh;
+	top: 0px;
+	opacity: 0;
+	/* mix-blend-mode: multiply; */
 	border: .1em solid black;
-	transition: filter 1s;
 	user-select: none;
 }
-
 
 #c:hover{
 	filter: drop-shadow(2px 2px 1px #00FF00);
 }
-/* 
-.text1 {
-	filter: drop-shadow(2px 2px 1px #00FF00);
-} */
 
 #panel {
 	color: black;
@@ -72,11 +66,11 @@ body{
 	width: 21vw;
 	height: 7vh;
 	border: .05em solid black;
-	top: 5vh;
 	align-items: center;
 	justify-content: center;
 	text-align:center;
 	left: 40vw;
+	top: 5vh;
 	user-select: none;
 	vertical-align: middle;
 }
