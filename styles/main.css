@@ -1,5 +1,5 @@
 html{
-	cursor: url('../icons/star6.png') 48 48, auto;
+	cursor: url('../icons/star5.svg') 48 48, auto;
 	overflow: hidden;
 }
 
@@ -55,7 +55,7 @@ body{
 	filter: drop-shadow(2px 2px 1px #00FF00);
 }
 
-#panel {
+#navpanel {
 	color: black;
 	font-family: 'Sinistre';
 	font-size: 2vw;
@@ -70,6 +70,7 @@ body{
 	justify-content: center;
 	text-align:center;
 	left: 40vw;
+	background-color: white;
 	top: 5vh;
 	user-select: none;
 	vertical-align: middle;
@@ -86,4 +87,19 @@ body{
 	height: auto;
 	left: 10vw;
 	top: 10vh;
+}
+
+#subpanel {
+	font-family: 'Sinistre';
+	border: .05em solid black;
+	display: block;
+	color: black;
+	background-color: white;
+	font-size: 1.5vw;
+	width: 8em;
+	height: auto;
+	left: 25vw;
+	position: fixed;
+	z-index: 20;
+	opacity: 0;
 }

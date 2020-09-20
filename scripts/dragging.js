@@ -1,5 +1,5 @@
-function makeDraggable(target) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+export function makeDraggable(target) {
+  var pos1, pos2, pos3, pos4;
 
   target.onmousedown = mouseDown;
 
@@ -7,7 +7,6 @@ function makeDraggable(target) {
     e = e || window.event;
     e.preventDefault();
 
-    target.style.transition = 'filter 0.5s';
 
     pos3 = e.clientX;
     pos4 = e.clientY;
@@ -17,6 +16,8 @@ function makeDraggable(target) {
   }
 
   function dragTarget(e) {    
+    target.style.transition = 'filter 0.5s';
+    
     e = e || window.event;
     e.preventDefault();
 
@@ -33,46 +34,5 @@ function makeDraggable(target) {
     document.onmouseup = null;
     document.onmousemove = null;
   }    
-}
-
-
-
-var min = 200;
-
-function randomInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-var randomWidth = randomInterval(min, window.innerWidth);
-var randomHeight = randomInterval(min, window.innerHeight);
-
-const ff = document.getElementById('c');
-const bb = document.getElementById('panel');
-
-
-window.onload = function(){
-    ff.style.transition = 'all 3s ease';
-    ff.style.top = randomHeight/1.5 + 'px';
-    ff.style.left = randomWidth - min + 'px';
-    ff.style.opacity = 1;
-    
-    function activateDraggable(){
-    makeDraggable(ff);
-    makeDraggable(bb);
-    }
-
-    setTimeout(activateDraggable, 3000)
-}
-console.log(ff.clientHeight, ff.clientWidth)
-
-function addCross(number) {  
-  button = document.getElementById(`button${number}`);
-  text = button.textContent;
-  button.textContent = '+' + text;
-}
-
-function deleteCross() {
-  button.textContent = text;
-  button.style.filter = 'drop-shadow(0px 0px 0px white)';
 }
 
