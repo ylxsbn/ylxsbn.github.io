@@ -103,3 +103,30 @@ body{
 	z-index: 20;
 	opacity: 0;
 }
+
+#photo {
+	width: 25%;
+	left: 30%;
+	top: 50%;
+	position: absolute;
+	z-index: 10;
+	opacity: 0;
+}
+
+
+#title {
+	font-family: 'Sinistre';
+	color: black;
+	position: absolute;
+	font-size: 8vw;
+	left: 46vw;
+	z-index: 10;
+	filter: drop-shadow(0px 0px 0px black)
+}
+
+#item {
+	width: 100%;
+	position: absolute;
+	/* top: 10vh; */
+	opacity: 0.8;
+}

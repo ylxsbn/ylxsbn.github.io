@@ -62,6 +62,10 @@ elm3.style.transition = 'all 3s ease';
 elm4.style.opacity = 0;
 elm4.style.transition = 'all 4s ease';
 
+
+
+
+
 function clickButton(target1, target2) {
   target2.style.transition = 'all 2s linear';
   var count = 1;
@@ -82,12 +86,14 @@ function clickButton(target1, target2) {
 clickButton(worksButton, worksPanel);
 
 
-function addSymbol(target, symbol) {
+function addSymbol(target, symbol, image) {
   var previousText = target.textContent
   target.onmouseover = function(){
     target.textContent = symbol + previousText;
+    document.getElementById('photo').style.opacity = 1;
   }
   target.onmouseout = function(){
+    document.getElementById('photo').style.opacity = 0;
     target.textContent = previousText;
   }
 }

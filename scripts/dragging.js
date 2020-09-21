@@ -31,6 +31,7 @@ export function makeDraggable(target) {
   }
 
   function closeDragTarget() {
+    target.style.transition = 'all 0.5s';
     document.onmouseup = null;
     document.onmousemove = null;
   }    
