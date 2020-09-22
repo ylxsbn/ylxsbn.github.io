@@ -27,12 +27,14 @@ body{
 .a{
 	font-family: 'Warped';
 	font-weight: roman;
-	font-size: 5vh;
-	color :black;
+	font-size: 10vh;
+	color: white;
 	position: absolute;
-	top: 9vh;
-	transform:rotate(-45deg);
+	filter: blur(1px);
 	user-select: none;
+	z-index: 50;
+	position: absolute;
+	mix-blend-mode: difference;
 }
 
 #c{
@@ -45,9 +47,10 @@ body{
 	text-align: center;
 	left: 40vh;
 	top: 0px;
+	z-index: 10;
 	opacity: 0;
 	/* mix-blend-mode: multiply; */
-	border: .1em solid black;
+	border: 0.07em solid black;
 	user-select: none;
 }
 
@@ -65,7 +68,7 @@ body{
 	text-align: center;
 	width: 21vw;
 	height: 7vh;
-	border: .05em solid black;
+	border: .03em solid black;
 	align-items: center;
 	justify-content: center;
 	text-align:center;
@@ -92,25 +95,27 @@ body{
 #subpanel {
 	font-family: 'Sinistre';
 	border: .05em solid black;
-	display: block;
 	color: black;
 	background-color: white;
 	font-size: 1.5vw;
 	width: 8em;
 	height: auto;
 	left: 25vw;
+	top:50vh;
 	position: fixed;
 	z-index: 20;
 	opacity: 0;
 }
 
 #photo {
-	width: 25%;
-	left: 30%;
-	top: 50%;
 	position: absolute;
-	z-index: 10;
+	z-index: 0;
 	opacity: 0;
+	filter: blur(0px);
+	/* mix-blend-mode: difference; */
+	width: 15%;
+	top: 10%;
+	left: 10%;
 }
 
 
@@ -127,6 +132,37 @@ body{
 #item {
 	width: 100%;
 	position: absolute;
-	/* top: 10vh; */
 	opacity: 0.8;
+	z-index: 0;
+}
+
+#infopanel {
+	font-family: 'Space mono', monospace;
+	font-weight: thin;
+	font-size: 0.5vw;
+	z-index: 12;
+	color:black;
+	position: absolute;
+	width: 25%;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	top: 90vh;
+	left: 0.5vw;
+	z-index: 76;
+	/* border: .05em solid black; */
+	/* filter: blur(2px); */
+}
+
+
+#elm1, #elm2, #elm3, #elm4, #elm5 a:visited {
+	color: 	black;
+	text-decoration: none;
+
+}
+
+#elm1, #elm2, #elm3, #elm4, #elm5 a:link {
+	color: black;
+	text-decoration: none;
+
 }

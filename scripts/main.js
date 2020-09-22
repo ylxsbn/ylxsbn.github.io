@@ -34,12 +34,14 @@ var elm1 = document.getElementById('elm1');
 var elm2 = document.getElementById('elm2');
 var elm3 = document.getElementById('elm3');
 var elm4 = document.getElementById('elm4');
+var elm5 = document.getElementById('elm5');
 
 function changeOpacity() {
   elm1.style.opacity = 1;
   elm2.style.opacity = 1;
   elm3.style.opacity = 1;
   elm4.style.opacity = 1;
+  elm5.style.opacity = 1;
 }
 
 function makeOpacity() {
@@ -47,6 +49,7 @@ function makeOpacity() {
   elm2.style.opacity = 0;
   elm3.style.opacity = 0;
   elm4.style.opacity = 0;
+  elm5.style.opacity = 0;
 }
 
 
@@ -62,6 +65,8 @@ elm3.style.transition = 'all 3s ease';
 elm4.style.opacity = 0;
 elm4.style.transition = 'all 4s ease';
 
+elm4.style.opacity = 0;
+elm5.style.transition = 'all 5s ease';
 
 
 
@@ -73,6 +78,9 @@ function clickButton(target1, target2) {
     count++;
     if (count % 2 == 0) {
       target2.style.opacity = 1;
+      target2.style.left = Math.random() * 1000;
+      target2.style.top = Math.random() * 1000;
+
       setTimeout(changeOpacity, 500);
     }
     else {
@@ -90,10 +98,8 @@ function addSymbol(target, symbol, image) {
   var previousText = target.textContent
   target.onmouseover = function(){
     target.textContent = symbol + previousText;
-    document.getElementById('photo').style.opacity = 1;
   }
   target.onmouseout = function(){
-    document.getElementById('photo').style.opacity = 0;
     target.textContent = previousText;
   }
 }
@@ -105,3 +111,26 @@ for (let i = 1; i < 4; i++) {
 for (let i = 1; i < 5; i++) {
   addSymbol(document.getElementById(`elm${i}`), '?')
 }
+
+elm4.onmouseover = function() {
+  document.getElementById('photo').style.opacity = 0.8;
+}
+
+elm4.onmouseout = function() {
+  document.getElementById('photo').style.opacity = 0;
+}
+
+
+var mouseChords = document.getElementById('mousecords');
+var timePanel = document.getElementById('time');
+var osPanel = document.getElementById('os');
+
+window.addEventListener('mousemove', getPos);
+function getPos(e){
+    mouseChords.textContent = `[x: ${e.x}, y: ${e.y}]`;
+    timePanel.textContent = new Date();
+    osPanel.textContent = navigator.userAgent;
+}
+
+
+
