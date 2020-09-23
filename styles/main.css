@@ -1,12 +1,11 @@
 html{
-	cursor: url('../icons/star5.svg') 48 48, auto;
 	overflow: hidden;
 }
 
 body{
 	background-color:white;
 	margin: 0vw;
-
+	cursor: crosshair;
 }
 
 ::selection {
@@ -112,9 +111,9 @@ body{
 	z-index: 0;
 	opacity: 0;
 	filter: blur(0px);
-	/* mix-blend-mode: difference; */
+	mix-blend-mode: hard-light;
 	width: 15%;
-	top: 10%;
+	top: 80%;
 	left: 10%;
 }
 
@@ -152,13 +151,13 @@ body{
 	z-index: 76;
 	/* border: .05em solid black; */
 	/* filter: blur(2px); */
+	mix-blend-mode: hard-light;
 }
 
 
-#elm1, #elm2, #elm3, #elm4, #elm5 a:visited {
+#elm1, #elm2, #elm3, #elm5, #elm4 a:visited {
 	color: 	black;
 	text-decoration: none;
-
 }
 
 #elm1, #elm2, #elm3, #elm4, #elm5 a:link {

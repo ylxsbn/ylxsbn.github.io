@@ -54,19 +54,19 @@ function makeOpacity() {
 
 
 elm1.style.opacity = 0;
-elm1.style.transition = 'all 1s ease';
+elm1.style.transition = 'all 5s ease';
 
 elm2.style.opacity = 0;
-elm2.style.transition = 'all 2s ease';
+elm2.style.transition = 'all 4s ease';
 
 elm3.style.opacity = 0;
 elm3.style.transition = 'all 3s ease';
 
 elm4.style.opacity = 0;
-elm4.style.transition = 'all 4s ease';
+elm4.style.transition = 'all 2s ease';
 
 elm4.style.opacity = 0;
-elm5.style.transition = 'all 5s ease';
+elm5.style.transition = 'all 1s ease';
 
 
 
@@ -108,7 +108,7 @@ for (let i = 1; i < 4; i++) {
   addSymbol(document.getElementById(`button${i}`), '+')
 }
 
-for (let i = 1; i < 5; i++) {
+for (let i = 1; i < 6; i++) {
   addSymbol(document.getElementById(`elm${i}`), '?')
 }
 
