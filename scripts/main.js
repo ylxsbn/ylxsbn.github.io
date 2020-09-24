@@ -92,33 +92,28 @@ function clickButton(target1, target2) {
 }
 
 clickButton(worksButton, worksPanel);
-
+var image = document.getElementById('photo');
 
 function addSymbol(target, symbol, image) {
   var previousText = target.textContent
   target.onmouseover = function(){
     target.textContent = symbol + previousText;
+    image.style.display = 'block';
   }
   target.onmouseout = function(){
     target.textContent = previousText;
+    image.style.display = 'none';
   }
 }
 
 for (let i = 1; i < 4; i++) {
-  addSymbol(document.getElementById(`button${i}`), '+')
+  addSymbol(document.getElementById(`button${i}`), '+', image);
 }
-
 for (let i = 1; i < 6; i++) {
-  addSymbol(document.getElementById(`elm${i}`), '?')
+  addSymbol(document.getElementById(`elm${i}`), '?', image);
 }
 
-elm4.onmouseover = function() {
-  document.getElementById('photo').style.opacity = 0.8;
-}
 
-elm4.onmouseout = function() {
-  document.getElementById('photo').style.opacity = 0;
-}
 
 
 var mouseChords = document.getElementById('mousecords');
@@ -126,6 +121,7 @@ var timePanel = document.getElementById('time');
 var osPanel = document.getElementById('os');
 
 window.addEventListener('mousemove', getPos);
+
 function getPos(e){
     mouseChords.textContent = `[x: ${e.x}, y: ${e.y}]`;
     timePanel.textContent = new Date();
