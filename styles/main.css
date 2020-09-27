@@ -5,7 +5,7 @@ html{
 body{
 	background-color:white;
 	margin: 0vw;
-	cursor: crosshair;
+	cursor: none;
 }
 
 ::selection {
@@ -103,7 +103,8 @@ body{
 	top:50vh;
 	position: fixed;
 	z-index: 20;
-	opacity: 0;
+	/* opacity: 0; */
+	display: none;
 }
 
 #photo {
@@ -115,6 +116,7 @@ body{
 	width: 15%;
 	top: 80%;
 	left: 10%;
+	display: none;
 }
 
 
@@ -125,14 +127,7 @@ body{
 	font-size: 20vw;
 	left: 10vw;
 	z-index: 1;
-}
-
-#item {
-	width: 100%;
-	position: absolute;
-	opacity: 0.8;
-	z-index: 0;
-	mix-blend-mode: hard-light;
+	top: 5vh;
 }
 
 #infopanel {
@@ -166,16 +161,63 @@ body{
 	text-decoration: none;
 }
 
-#text {
+#subtext {
 	color: white;
 	z-index: 3;
 	position: absolute;
+	width: 53vw;
 	font-family: 'Space Mono', monospace;
 	font-weight: light;
 	font-size: 2vw;
-	top: 20vh;
+	top: 30vh;
 	left: 5vw;
 	/* filter: drop-shadow(1px 1px 0px #5700FF); */
-	background-color: #FF0D00;
+	/* background-color: #FF0D00; */
 	background-color: black;
+}
+
+#photo1 {
+	z-index: 0;
+	width: 100%;
+	opacity: 0;
+	/* transition: all 0.1s linear; */
+	position: absolute;
+}
+
+#arrow {
+	position: absolute;
+	top: 82vh;
+	left: 46.5vw;
+	display: flex;
+	text-align: center;
+	font-family: 'Sinistre';
+	font-size: 8vw;
+	color: #00FF00;
+	z-index: 5;
+	filter: blur(4px);
+	/* background-color: black; */
+}
+
+
+#photo1, #photo2, #photo3, #photo4, #photo5, #photo0{
+	width: 12%;
+	position: absolute;
+	display: none;
+	transition: 5s all;
+	top: 85vh;
+	left: 87vw;
+
+}
+
+#subtext1 {
+	font-family: 'Space Mono';
+	width: 20vw;
+	height: 100%;
+	position: absolute;
+	color:  #00FF00;
+	z-index: 10;
+	font-size: 1vw;
+	left: 85vw;
+	top: 95vh;
+	/* mix-blend-mode: difference; */
 }

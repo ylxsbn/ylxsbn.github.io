@@ -77,14 +77,14 @@ function clickButton(target1, target2) {
   target1.onclick = function() {
     count++;
     if (count % 2 == 0) {
-      target2.style.opacity = 1;
+      target2.style.display = 'block';
       target2.style.left = Math.random() * 1000;
       target2.style.top = Math.random() * 1000;
 
       setTimeout(changeOpacity, 500);
     }
     else {
-      target2.style.opacity = 0;
+      target2.style.display = 'none';
       setTimeout(makeOpacity, 500);
     }
     console.log(count);
@@ -112,7 +112,6 @@ for (let i = 1; i < 4; i++) {
 for (let i = 1; i < 6; i++) {
   addSymbol(document.getElementById(`elm${i}`), '?', image);
 }
-
 
 
 
