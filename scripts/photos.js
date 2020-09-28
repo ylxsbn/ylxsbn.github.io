@@ -13,25 +13,25 @@ function changeBlur(e){
     arrow.style.top = (e.y - 70) + 'px';
     arrow.style.left = (e.x - 40) + 'px';
 
-    var randomNumber = Math.floor(Math.random() * 5 + 1);
-    var photo = document.getElementById(`photo${randomNumber}`)
-    var photo2 = document.getElementById(`photo${randomNumber - 1}`)
+    // var randomNumber = Math.floor(Math.random() * 5 + 1);
+    // var photo = document.getElementById(`photo${randomNumber}`)
+    // var photo2 = document.getElementById(`photo${randomNumber - 1}`)
     
-    subtext1.textContent = randomNumber * Math.random();
+    // subtext1.textContent = randomNumber * Math.random();
 
-    photo.style.display = 'block';
-    photo2.style.zIndex = randomNumber;
-    // photo.style.top = Math.random() * window.innerHeight/2 + 500 + 'px';
-    // photo.style.left = Math.random() * window.innerWidth + 'px';
-    photo2.style.display = 'none';
+    // photo.style.display = 'block';
+    // photo2.style.zIndex = randomNumeber;
+    // photo2.style.display = 'none';
+
     // photo.style.width = randomNumber * 60 + 'px';
     // photo2.style.mixBlendMode = 'hard-light';
+    // photo.style.top = Math.random() * window.innerHeight/2 + 500 + 'px';
+    // photo.style.left = Math.random() * window.innerWidth + 'px';
 
 
     if (e.y > window.innerHeight/1.4){
         arrow.textContent = '↓';
-        subtext.textContent = 'GO TO THE PHOTOS.';
-        
+        // subtext.textContent = 'GO TO THE PHOTOS.';
     }
     else if (e.y <= 150){
         arrow.textContent = '↑';

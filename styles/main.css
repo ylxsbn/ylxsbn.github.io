@@ -202,11 +202,11 @@ body{
 #photo1, #photo2, #photo3, #photo4, #photo5, #photo0{
 	width: 12%;
 	position: absolute;
-	display: none;
+	display: block;
 	transition: 5s all;
 	top: 85vh;
 	left: 87vw;
-
+	opacity: 1;
 }
 
 #subtext1 {
