@@ -1,11 +1,11 @@
 html{
 	overflow: hidden;
+	cursor: none;
 }
 
 body{
-	background-color:white;
+	background-color: white;
 	margin: 0vw;
-	cursor: none;
 }
 
 ::selection {
@@ -122,7 +122,7 @@ body{
 
 #title {
 	font-family: 'Sinistre';
-	color: black;
+	color: white;
 	position: absolute;
 	font-size: 20vw;
 	left: 10vw;
@@ -193,17 +193,18 @@ body{
 	font-family: 'Sinistre';
 	font-size: 8vw;
 	color: #00FF00;
-	z-index: 5;
+	z-index: 100;
 	filter: blur(4px);
 	/* background-color: black; */
+	pointer-events: none;
 }
 
 
-#photo1, #photo2, #photo3, #photo4, #photo5, #photo0{
+#photo1, #photo2, #photo3, #photo4, #photo5, #photo6, #photo7, #photo8 {
 	width: 12%;
 	position: absolute;
 	display: block;
-	transition: 5s all;
+	/* transition: 5s all; */
 	top: 85vh;
 	left: 87vw;
 	opacity: 1;

@@ -125,6 +125,9 @@ function getPos(e){
     mouseChords.textContent = `[x: ${e.x}, y: ${e.y}]`;
     timePanel.textContent = new Date();
     osPanel.textContent = navigator.userAgent;
+    
+    arrow.style.top = (e.y - 70) + 'px';
+    arrow.style.left = (e.x - 40) + 'px';
 }
 
 
