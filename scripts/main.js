@@ -4,8 +4,39 @@ const message = document.getElementById('c');
 const navPanel = document.getElementById('navpanel');
 const worksPanel = document.getElementById('subpanel');
 
+var canvas = document.getElementById('canvas');
+var c = canvas.getContext('2d');
+
 const aboutButton = document.getElementById('button1');
 const worksButton = document.getElementById('button2');
+
+var kick = document.getElementById('drum');
+var snare = document.getElementById('snare');
+var hiHat = document.getElementById('hihat');
+
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
+function draw() {  
+  setTimeout(function() {
+  requestAnimationFrame(draw);
+  c.clearRect(0, 0, innerWidth, innerHeight);
+      for (var i = 0; i < 1000; i++) { 
+        var size = Math.random() * 5; 
+        var posX = Math.random() * window.innerWidth;
+        var posY = Math.random() * window.innerHeight;
+          //drawing figure
+          c.beginPath();
+          c.fillStyle = 'black';
+          c.fillRect(posX, posY, size, size);
+      }
+  }, 1000/12);
+}
+
+draw();
+
 
 function randomInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -30,46 +61,6 @@ window.onload = function(){
     setTimeout(activateDraggable, 3000)
 }
 
-var elm1 = document.getElementById('elm1');
-var elm2 = document.getElementById('elm2');
-var elm3 = document.getElementById('elm3');
-var elm4 = document.getElementById('elm4');
-var elm5 = document.getElementById('elm5');
-
-function changeOpacity() {
-  elm1.style.opacity = 1;
-  elm2.style.opacity = 1;
-  elm3.style.opacity = 1;
-  elm4.style.opacity = 1;
-  elm5.style.opacity = 1;
-}
-
-function makeOpacity() {
-  elm1.style.opacity = 0;
-  elm2.style.opacity = 0;
-  elm3.style.opacity = 0;
-  elm4.style.opacity = 0;
-  elm5.style.opacity = 0;
-}
-
-
-elm1.style.opacity = 0;
-elm1.style.transition = 'all 5s ease';
-
-elm2.style.opacity = 0;
-elm2.style.transition = 'all 4s ease';
-
-elm3.style.opacity = 0;
-elm3.style.transition = 'all 3s ease';
-
-elm4.style.opacity = 0;
-elm4.style.transition = 'all 2s ease';
-
-elm4.style.opacity = 0;
-elm5.style.transition = 'all 1s ease';
-
-
-
 
 function clickButton(target1, target2) {
   target2.style.transition = 'all 2s linear';
@@ -77,15 +68,16 @@ function clickButton(target1, target2) {
   target1.onclick = function() {
     count++;
     if (count % 2 == 0) {
+      kick.play();
+      
       target2.style.display = 'block';
       target2.style.left = Math.random() * 1000;
       target2.style.top = Math.random() * 1000;
-
-      setTimeout(changeOpacity, 500);
     }
     else {
+      snare.play();
+      
       target2.style.display = 'none';
-      setTimeout(makeOpacity, 500);
     }
     console.log(count);
   }
@@ -93,10 +85,14 @@ function clickButton(target1, target2) {
 
 clickButton(worksButton, worksPanel);
 var image = document.getElementById('photo');
+var image = document.getElementById('photo');
+
 
 function addSymbol(target, symbol, image) {
   var previousText = target.textContent
   target.onmouseover = function(){
+    hiHat.play();
+    
     target.textContent = symbol + previousText;
     image.style.display = 'block';
   }
@@ -114,7 +110,6 @@ for (let i = 1; i < 6; i++) {
 }
 
 
-
 var mouseChords = document.getElementById('mousecords');
 var timePanel = document.getElementById('time');
 var osPanel = document.getElementById('os');
@@ -126,8 +121,11 @@ function getPos(e){
     timePanel.textContent = new Date();
     osPanel.textContent = navigator.userAgent;
     
+    arrow.textContent = '?';
+    arrow.fontSize = '2vw';
     arrow.style.top = (e.y - 70) + 'px';
     arrow.style.left = (e.x - 40) + 'px';
+    arrow.style.color = 'black';
 }
 
 

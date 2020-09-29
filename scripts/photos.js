@@ -20,7 +20,7 @@ function changeBlur(e){
     arrow.style.left = (e.x - 40) + 'px';
     
     var photo;
-
+// Rework a bit / get rid of flashing
     function showPicture() {
         if (counter < 8) {
             counter++;
