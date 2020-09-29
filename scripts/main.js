@@ -23,8 +23,10 @@ canvas.height = window.innerHeight;
 
 function draw() {  
   setTimeout(function() {
-  requestAnimationFrame(draw);
-  c.clearRect(0, 0, innerWidth, innerHeight);
+    noise.play()
+  
+    requestAnimationFrame(draw);
+    c.clearRect(0, 0, innerWidth, innerHeight);
       for (var i = 0; i < 1000; i++) { 
         var size = Math.random() * 5; 
         var posX = Math.random() * window.innerWidth;
@@ -65,7 +67,6 @@ window.onload = function(){
 
 
 function clickButton(target1, target2) {
-  noise.play()
   
   target2.style.transition = 'all 2s linear';
   var count = 1;
