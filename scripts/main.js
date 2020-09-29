@@ -1,3 +1,5 @@
+// Переход от белого в черный
+
 import { makeDraggable } from './dragging.js'
 
 const message = document.getElementById('c');
@@ -13,7 +15,7 @@ const worksButton = document.getElementById('button2');
 var kick = document.getElementById('drum');
 var snare = document.getElementById('snare');
 var hiHat = document.getElementById('hihat');
-
+var noise = document.getElementById('noise');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -47,6 +49,7 @@ var randomHeight = randomInterval(min, window.innerHeight);
 
 
 window.onload = function(){
+    noise.play()
     message.style.transition = 'all 3s ease';
     message.style.top = randomHeight/1.5 + 'px';
     message.style.left = randomWidth - min + 'px';
