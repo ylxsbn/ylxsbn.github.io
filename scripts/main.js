@@ -49,7 +49,6 @@ var randomHeight = randomInterval(min, window.innerHeight);
 
 
 window.onload = function(){
-    noise.play()
     message.style.transition = 'all 3s ease';
     message.style.top = randomHeight/1.5 + 'px';
     message.style.left = randomWidth - min + 'px';
@@ -66,6 +65,8 @@ window.onload = function(){
 
 
 function clickButton(target1, target2) {
+  noise.play()
+  
   target2.style.transition = 'all 2s linear';
   var count = 1;
   target1.onclick = function() {
