@@ -125,7 +125,8 @@ function getPos(e){
     arrow.fontSize = '2vw';
     arrow.style.top = (e.y - 70) + 'px';
     arrow.style.left = (e.x - 40) + 'px';
-    arrow.style.color = 'black';
+    arrow.style.color = 'white';
+    arrow.style.mixBlendMode = 'difference';
 }
 
 
