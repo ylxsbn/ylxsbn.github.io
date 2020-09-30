@@ -1,0 +1,99 @@
+html{
+	overflow: hidden;
+	cursor: none;
+}
+
+body{
+	background-color: black;
+	margin: 0vw;
+}
+
+
+
+@font-face {
+	font-family: Sinistre;
+	src: url("fonts/Sinistre.woff") format("woff");
+}
+
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 50%;
+    grid-gap: 1em;
+    opacity: 0;
+}
+
+
+.box1 {
+    color: #00FF00;
+    font-family: 'Sinistre';
+}
+
+#pht {
+    width:20vw;
+	align-content: center;
+}
+
+#title {
+	font-family: 'Sinistre';
+	color: white;
+	/* position: absolute; */
+	font-size: 5vw;
+	/* left: 10vw; */
+	z-index: 1;
+    /* top: 5vh; */
+}
+
+
+#photo1, #photo2, #photo3, #photo4, #photo5, #photo6, #photo7, #photo8 {
+	width: 12%;
+	/* width: 20%; */
+	position: absolute;
+	top: 85vh;
+	left: 87vw;
+}
+
+#subtext1 {
+	font-family: 'Space Mono';
+	width: 20vw;
+	height: 100%;
+	position: absolute;
+	color:  #00FF00;
+	z-index: 10;
+	font-size: 1vw;
+	left: 85vw;
+	top: 95vh;
+	/* mix-blend-mode: difference; */
+}
+
+
+#arrow {
+	position: absolute;
+	top: 82vh;
+	left: 46.5vw;
+	display: flex;
+	text-align: center;
+	font-family: 'Sinistre';
+	font-size: 8vw;
+	color: #00FF00;
+	z-index: 100;
+	filter: blur(4px);
+	/* background-color: black; */
+	pointer-events: none;
+}
+
+
+#subtext {
+	color: white;
+	z-index: 3;
+	position: absolute;
+	width: 53vw;
+	font-family: 'Space Mono', monospace;
+	font-weight: light;
+	font-size: 2vw;
+	top: 30vh;
+	left: 5vw;
+    background-color: black;
+    transition: 2s all;
+}

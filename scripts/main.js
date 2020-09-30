@@ -67,7 +67,6 @@ window.onload = function(){
 
 
 function clickButton(target1, target2) {
-  
   target2.style.transition = 'all 2s linear';
   var count = 1;
   target1.onclick = function() {
@@ -84,7 +83,6 @@ function clickButton(target1, target2) {
       
       target2.style.display = 'none';
     }
-    console.log(count);
   }
 }
 
@@ -96,8 +94,10 @@ var image = document.getElementById('photo');
 function addSymbol(target, symbol, image) {
   var previousText = target.textContent
   target.onmouseover = function(){
+    arrow.style.color = 'green';
+     
+
     hiHat.play();
-    
     target.textContent = symbol + previousText;
     image.style.display = 'block';
   }

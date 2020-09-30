@@ -2,18 +2,16 @@ var title = document.getElementById('title');
 var arrow = document.getElementById('arrow');
 var subtext = document.getElementById('subtext');
 var subtext1 = document.getElementById('subtext1');
-var body = document.getElementById('body1');
-
+var wrapper = document.querySelector('.wrapper');
 
 var counter = 0;
 
-body1.style.backgroundColor = 'black';
 
-window.addEventListener('mousemove', changeBlur);
+window.addEventListener('mousemove', dynamic);
 
-function changeBlur(e){
+var flag;
 
-    console.log(window.innerWidth / e.x)
+function dynamic(e){
 
     title.style.filter = `blur(${(e.x - e.y)/250 + 12}px)`;
     arrow.style.top = (e.y - 70) + 'px';
@@ -35,37 +33,29 @@ function changeBlur(e){
             }
         }
     }
-
-    showPicture()
     
+    showPicture();
     subtext1.textContent = Math.floor((e.x / window.innerWidth) * 8) + 1;
 
-
-    // photo.style.width = randomNumber * 60 + 'px';
-    // photo2.style.mixBlendMode = 'hard-light';
-    // photo.style.top = Math.random() * window.innerHeight/2 + 500 + 'px';
-    // photo.style.left = Math.random() * window.innerWidth + 'px';
-
+    // if (e.y <= 500) {
+    //     arrow.textContent = '↑';
+    //     arrow.style.color = '#00FF00';
+    // } 
+    
 
     if (e.y > window.innerHeight/1.4){
         arrow.textContent = '↓';
-        // subtext.textContent = 'GO TO THE PHOTOS.';
-    }
-    else if (e.y <= 150){
-        arrow.textContent = '↑';
-        arrow.style.color = '#00FF00';
-        arrow.style.color = 'red';
-    }
-    else {
-        arrow.textContent = '?';
-        arrow.style.color = '#00FF00'
     }
 
     if (e.y > window.innerHeight/1.2){
-        subtext.style.opacity = 0;
-        title.style.opacity = '0';
+        subtext.style.opacity = '0';
         arrow.style.color = 'red';
+        wrapper.style.opacity = '1';
     }
 
-    // title.style.filter = `blur(${((window.innerWidth + e.x) + (window.innerHeight - e.y))/250 + 5}px)`;
+    else {
+        arrow.textContent = '?';
+        arrow.style.color = '#00FF00'
+
+    }
 }
