@@ -18,8 +18,8 @@ body{
 
 .wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 50%;
+	grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+	/* grid-auto-rows: 50%; */
     grid-gap: 1em;
     opacity: 0;
 }
@@ -27,7 +27,8 @@ body{
 
 .box1 {
     color: #00FF00;
-    font-family: 'Sinistre';
+	font-family: 'Sinistre';
+	width: 5%;
 }
 
 #pht {
