@@ -13,10 +13,11 @@ var flag;
 
 function dynamic(e){
 
-    title.style.filter = `blur(${(e.x - e.y)/250 + 12}px)`;
+    title.style.filter = `blur(${(e.x - e.y)/250 + 6}px)`;
     arrow.style.top = (e.y - 70) + 'px';
     arrow.style.left = (e.x - 40) + 'px';
     
+
     var photo;
 // Rework a bit / get rid of flashing
     function showPicture() {
@@ -35,7 +36,7 @@ function dynamic(e){
     }
     
     showPicture();
-    subtext1.textContent = Math.floor((e.x / window.innerWidth) * 8) + 1;
+    subtext1.textContent = (Math.floor((e.x / window.innerWidth) * 8) + 1 * Math.random());
 
     // if (e.y <= 500) {
     //     arrow.textContent = '↑';
