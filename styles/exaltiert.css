@@ -65,7 +65,7 @@ a:hover {
     color: lime;
     position: relative;
     padding-top: 1vh;
-    font-size: 100%;
+    font-size: 1vw;
     display: flex;
     justify-content: space-between;
     width: 51%
