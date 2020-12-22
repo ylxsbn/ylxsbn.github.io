@@ -17,26 +17,28 @@ function dynamic(e){
     arrow.style.top = (e.y - 70) + 'px';
     arrow.style.left = (e.x - 40) + 'px';
     
-
     var photo;
 // Rework a bit / get rid of flashing
+
+    var id;
     function showPicture() {
         if (counter < 8) {
+            id = Math.floor((e.x / window.innerWidth) * 8) + 1
             counter++;
-            photo = document.getElementById(`photo${Math.floor((e.x / window.innerWidth) * 8) + 1}`);
-            photo.style.display = 'block';
+            photo = document.getElementById(`photo${id}`);
+            photo.style.opacity = '1';
         }
         else {
             counter = 0;
             for (var i=1; i <= 8; i++) {
                 photo = document.getElementById(`photo${i}`);
-                photo.style.display = 'none';
+                photo.style.opacity = '0';
             }
         }
     }
     
     showPicture();
-    subtext1.textContent = (Math.floor((e.x / window.innerWidth) * 8) + 1 * Math.random());
+    subtext1.textContent = (e.x / window.innerWidth) * 8 * Math.random();
 
     // if (e.y <= 500) {
     //     arrow.textContent = '↑';

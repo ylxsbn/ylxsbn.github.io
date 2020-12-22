@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
-<link type="text/css" href="styles/dunkel1.css" rel="stylesheet">
-<title>y</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+<head>
+	<link type="text/css" href="styles/dunkel1.css" rel="stylesheet">
+	<title>y</title>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
-	<body>
-	<audio src = "music/horn.mp3" autoplay loop></audio>
-	<canvas id = "background"></canvas>
-	<canvas id = "canvasCursor"></canvas>
+
+<body>
+	<audio src="music/horn.mp3" autoplay loop></audio>
+	<canvas id="background"></canvas>
+	<canvas id="canvasCursor"></canvas>
 	<!-- <object class = "net"
 	type="image/svg+xml"
 	data="images/net.svg">
   </object> -->
-	<div class = "title">YLXSBN</div>
-		
-	 	<div id="panel">
-			<a id = "button1" onmouseover="addCross(1)" onmouseout='deleteCross()'>about</a>\
-			<a id = "button2" onmouseover="addCross(2)" onmouseout='deleteCross()'>works</a>\
-			<a id = "button3" onmouseover="addCross(3)" onmouseout='deleteCross()'>store</a>
-		</div>
-		
-			<div id="infobar">
-			<div class="resizer lt"></div>
-			<div class="resizer rt"></div>
-			<div class="resizer bl"></div>
-			<div class="resizer br"></div>
+	<div class="title">YLXSBN</div>
 
-			<span id="mousecords">[x: undefined, y: undefined];</span><br/><br/>
-			<span id="time">undefined;</span><br/><br/>
-			<span id="os">undefined;</span><br/>
-		
-		</div><script src = "scripts/info.js"  type="text/javascript"></script>
-		
-		<img id = "mountain" src="images/mountain.png">
-		<img id = "mask" src="images/mask.png">
-		<img id = "star" src="images/star.png">
+	<div id="panel">
+		<a id="button1" onmouseover="addCross(1)" onmouseout='deleteCross()'>about</a>\
+		<a id="button2" onmouseover="addCross(2)" onmouseout='deleteCross()'>works</a>\
+		<a id="button3" onmouseover="addCross(3)" onmouseout='deleteCross()'>store</a>
+	</div>
 
-		<div id = "input">
-			<span class = "inptitle">The Earth Speed</span>
-			<input type="text" id="inputform" maxlength = "3" minlength="1" size="5" value="1" onkeyup = "getFps()"/>
-		</div>
+	<div id="infobar">
+		<div class="resizer lt"></div>
+		<div class="resizer rt"></div>
+		<div class="resizer bl"></div>
+		<div class="resizer br"></div>
 
-		<script src = "scripts/dunkel1.js"  type="text/javascript"></script>
-		<script src = "scripts/dragging.js"  type="text/javascript"></script>
+		<span id="mousecords">[x: undefined, y: undefined];</span><br /><br />
+		<span id="time">undefined;</span><br /><br />
+		<span id="os">undefined;</span><br />
+
+	</div>
+	<script src="scripts/info.js" type="text/javascript"></script>
+
+	<img id="mountain" src="images/mountain.png">
+	<img id="mask" src="images/mask.png">
+	<img id="star" src="images/star.png">
+
+	<div id="input">
+		<span class="inptitle">The Earth Speed</span>
+		<input type="text" id="inputform" maxlength="3" minlength="1" size="5" value="1" onkeyup="getFps()" />
+	</div>
+
+	<script src="scripts/dunkel1.js" type="text/javascript"></script>
+	<script src="scripts/dragging.js" type="text/javascript"></script>
 </body>
+
 </html>

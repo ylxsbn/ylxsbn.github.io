@@ -1,0 +1,79 @@
+@font-face {
+	font-family: Warped;
+	src: url("fonts/SpratWarped.woff") format("woff");
+}
+@font-face {
+	font-family: Sinistre;
+	src: url("fonts/Sinistre.woff") format("woff");
+}
+@font-face {
+	font-family: ApfelGrotezk;
+	src: url("fonts/ApfelGrotezk.woff") format("woff");
+}
+@font-face {
+	font-family: WaxMelt;
+	src: url("fonts/WaxMelt-Regular.woff") format("woff");
+}
+
+body {
+    /* margin: 0; */
+    background-color: black;
+}
+
+
+::selection {
+    color: white;
+    background-color: blue;
+    mix-blend-mode: difference;
+}
+
+/* YELLOW OR LIME COLORs */
+
+.title {
+    font-family: 'WaxMelt';
+    background-color: lime;
+    font-size: 1.5rem;
+    padding-left: 0.4%;
+    padding-right: 0.4%;
+    width: 50%;
+    border: solid 1px lime;
+}
+
+.info {
+    font-family: 'Sinistre';
+    color: white;
+    border: dashed 1px lime;
+    padding: 0.4%;
+    width: 50%;
+
+}
+
+a {
+    text-decoration: none;
+    color: lime;
+}
+a:hover {
+    color: white;
+    filter: blur(0.4px);
+    transition: linear 0.2s all;
+}
+
+.hl {
+    font-family: 'WaxMelt';
+    background-color: black;
+    font-style: italic;
+    color: lime;
+    position: relative;
+    padding-top: 1vh;
+    font-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 51%
+}
+
+.text {
+    font-size: 2em;
+    color: white;
+    font-family: 'WaxMelt';
+    text-align: left;
+}

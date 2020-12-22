@@ -23,6 +23,11 @@ body{
 	src: url("fonts/Sinistre.woff") format("woff");
 }
 
+@font-face {
+	font-family: ApfelGrotezk;
+	src: url("fonts/ApfelGrotezk.woff") format("woff");
+}
+
 .a{
 	font-family: 'Warped';
 	font-weight: roman;
@@ -37,7 +42,7 @@ body{
 }
 
 #c{
-	font-family: 'Space Mono', monospace;
+	font-family: 'Sinistre';
 	font-weight: thin;
 	font-size: 1vw;
 	color: black;

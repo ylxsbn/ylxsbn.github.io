@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sphynx Cat WIP (Week2)
+* source:	https://sketchfab.com/3d-models/sphynx-cat-wip-week2-1c9f381323a641eb9150d4d7783c1d42
+* author:	camila mena (https://sketchfab.com/CMenaTabuada)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sphynx Cat WIP (Week2)" (https://sketchfab.com/3d-models/sphynx-cat-wip-week2-1c9f381323a641eb9150d4d7783c1d42) by camila mena (https://sketchfab.com/CMenaTabuada) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
