@@ -13,18 +13,18 @@ const input = document.getElementById("inputform");
 
 window.fps = input.value;
 
-function getFps(){
-window.fps = input.value;
+function getFps() {
+    window.fps = input.value;
 
-var title = document.querySelector('.title');
+    var title = document.querySelector('.title');
 
-    if (window.fps > 60){
-        title.textContent ='BE CAREFUL';
+    if (window.fps > 60) {
+        title.textContent = 'BE CAREFUL';
     }
     if (window.fps > 100) {
         title.textContent = "DON'T DO THAT";
     }
-    if (window.fps > 200){
+    if (window.fps > 200) {
         title.textContent = 'GOODBYE';
         canvas.style.opacity = "0";
         title.style.color = '#ff0000';
@@ -33,7 +33,7 @@ var title = document.querySelector('.title');
     }
 
     function closeWindow() {
-        window.open('','_self').close();
+        window.open('', '_self').close();
     }
 }
 
@@ -41,30 +41,30 @@ window.addEventListener('mousemove', getPos);
 
 var dotX, dotY;
 
-function getPos(e){
+function getPos(e) {
     dotX = e.x;
     dotY = e.y;
 }
 
-function animateCursor(){
-    setTimeout(function() {  
-    window.requestAnimationFrame(animateCursor);
-    ctxCursor.clearRect(0, 0, innerWidth, innerHeight);
-        for (i = 0; i < 2; i++){
-        let offX = Math.random() * 100 + dotX - 50;
-        let offY = Math.random() * 100 + dotY - 50;
-        let size = 1;
-        
-        ctxCursor.beginPath();
-        ctxCursor.fillStyle = '#00FF00';
+function animateCursor() {
+    setTimeout(function () {
+        window.requestAnimationFrame(animateCursor);
+        ctxCursor.clearRect(0, 0, innerWidth, innerHeight);
+        for (i = 0; i < 2; i++) {
+            let offX = Math.random() * 100 + dotX - 50;
+            let offY = Math.random() * 100 + dotY - 50;
+            let size = 1;
+
+            ctxCursor.beginPath();
+            ctxCursor.fillStyle = '#00FF00';
 
             ctxCursor.fillRect(offX, offY, size, size);
-        ctxCursor.fillRect(offX-shift*size, offY, size, size);
-        ctxCursor.fillRect(offX+shift*size, offY, size, size);
-        ctxCursor.fillRect(offX, offY+shift*size, size, size);
-        ctxCursor.fillRect(offX, offY-shift*size, size, size);
-    }
-}, 1000/12);
+            ctxCursor.fillRect(offX - shift * size, offY, size, size);
+            ctxCursor.fillRect(offX + shift * size, offY, size, size);
+            ctxCursor.fillRect(offX, offY + shift * size, size, size);
+            ctxCursor.fillRect(offX, offY - shift * size, size, size);
+        }
+    }, 1000 / 12);
 }
 
 animateCursor();
@@ -87,26 +87,26 @@ function showMask() {
 //     requestAnimationFrame(getRandom);
 // }
 
-function draw() {  
-    setTimeout(function() {
-    requestAnimationFrame(draw);
-    c.clearRect(0, 0, innerWidth, innerHeight);
-        for (var i = 0; i < value   ; i++) { 
+function draw() {
+    setTimeout(function () {
+        requestAnimationFrame(draw);
+        c.clearRect(0, 0, innerWidth, innerHeight);
+        for (var i = 0; i < value; i++) {
             posX = Math.random() * window.innerWidth;
             posY = Math.random() * window.innerHeight;
             //drawing figure
             c.beginPath();
             c.fillStyle = '#00FF00';
-            
+
             c.fillRect(posX, posY, size, size);
-            c.fillRect(posX-shift, posY, size, size);
-            c.fillRect(posX+shift, posY, size, size);
-            c.fillRect(posX, posY+shift, size, size);
-            c.fillRect(posX, posY-shift , size, size);
-            
-            setTimeout(showMask, 200);   
+            c.fillRect(posX - shift, posY, size, size);
+            c.fillRect(posX + shift, posY, size, size);
+            c.fillRect(posX, posY + shift, size, size);
+            c.fillRect(posX, posY - shift, size, size);
+
+            setTimeout(showMask, 200);
         }
-    }, 1000/window.fps);
+    }, 1000 / window.fps);
 }
 
 draw();
@@ -131,20 +131,20 @@ draw();
 
 const panel = document.getElementById('panel');
 
-function addCross(number) {  
-  button = document.getElementById(`button${number}`);
-  text = button.textContent;
-  
-  button.textContent = '+' + text;
-  panel.style.filter = 'drop-shadow(0 0 0px #ff0000)';
-  button.style.filter = 'drop-shadow(0 0 5px #ff0000)';
-  panel.style.border = '1px solid #ff0000';
+function addCross(number) {
+    button = document.getElementById(`button${number}`);
+    text = button.textContent;
+
+    button.textContent = '+' + text;
+    panel.style.filter = 'drop-shadow(0 0 0px #ff0000)';
+    button.style.filter = 'drop-shadow(0 0 5px #ff0000)';
+    panel.style.border = '1px solid #ff0000';
 }
 
 function deleteCross() {
-  button.textContent = text;
-  panel.style.filter = 'drop-shadow(0 0 5px #00FF00)';
-  panel.style.color = '#00FF00';
-  panel.style.border = '1px solid #00FF00';
-  button.style.filter = 'drop-shadow(0 0 0px #ff0000)';
+    button.textContent = text;
+    panel.style.filter = 'drop-shadow(0 0 5px #00FF00)';
+    panel.style.color = '#00FF00';
+    panel.style.border = '1px solid #00FF00';
+    button.style.filter = 'drop-shadow(0 0 0px #ff0000)';
 }

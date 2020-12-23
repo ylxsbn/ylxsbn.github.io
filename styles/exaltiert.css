@@ -15,9 +15,15 @@
 	src: url("fonts/WaxMelt-Regular.woff") format("woff");
 }
 
+html {
+    cursor: none;
+    overflow: hidden;
+}
+
 body {
     /* margin: 0; */
     background-color: black;
+
 }
 
 
@@ -51,6 +57,7 @@ body {
 a {
     text-decoration: none;
     color: lime;
+    cursor: none;
 }
 a:hover {
     color: white;
@@ -71,9 +78,24 @@ a:hover {
     width: 51%
 }
 
-.text {
+.pointer {
     font-size: 2em;
-    color: white;
+    color: rgb(255, 255, 255);
+    width: 20%;
+    height: 20%;
     font-family: 'WaxMelt';
-    text-align: left;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    text-align: center;
+}
+
+.text {
+    color: rgb(0, 59, 20);
+    font-size: .8em;
+    font-family: 'Merchant Copy';
+    position: absolute;
+    top: 80vh;
+    left: 95vw;
+    filter: blur(.2px);
 }

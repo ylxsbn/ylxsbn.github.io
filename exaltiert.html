@@ -25,39 +25,75 @@
         <div class='hl'>
             <a href="https://www.python.org/">[WRITTEN IN THE
                 PYTHON3]</a>-----------------------
-            <a>[AM, FM, &lt...&gt]</a>---------------------
-            <a>[CUSTOM MATH EXPRESSION FIELD]</a>
+            <a href="">[AM, FM, &lt...&gt]</a>---------------------
+            <a href="">[CUSTOM MATH EXPRESSION FIELD]</a>
         </div>
 
 
+        <div class="pointer">
+            &-F-&
+        </div>
+
         <div class="text">
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
-            &FIELDS-HERO&</br>
             &FIELDS-HERO&</br>
 
         </div>
 
     </div>
 
+    <script>
+        var pointer = document.querySelector('.pointer');
+        var pStyle = pointer.style;
+        var pRect = pointer.getBoundingClientRect();
+        var text = document.querySelector('.text');
+
+        window.addEventListener('mousemove', (e) => {
+            pStyle.left = `${e.x-pRect.width/2}px`;
+            pStyle.top = `${e.y-pRect.height/10}px`;
+            // fieldsHero.textContent = '&FIELDS-HERO&';
+        })
+
+        var links = document.querySelectorAll('a');
+
+        links.forEach(element => {
+            element.onmouseover = () => {
+                pointer.textContent = '???';
+                pStyle.color = 'yellow';
+            }
+            element.onmouseout = () => {
+                pointer.textContent = '&-F-&';
+                pStyle.color = 'white';
+            }
+        })
+
+        var counter = 0;
+        var interval = 100
+        // IMPLEMENT SINE WAVE ANIMATION WITH TEXT
+        function textAnimation(e) {
+            setTimeout(function () {
+                requestAnimationFrame(textAnimation);
+
+                counter++;
+                interval += interval / 10;
+
+                if (counter >= 21) {
+                    counter = 0;
+                    interval = 100;
+                    text.innerHTML = '&FIELDS-HERO&</br>';
+                }
+                pRect = pointer.getBoundingClientRect();
+                text.innerHTML += `[->${pRect.x};${pRect.y}]</br>`;
+            }, interval);
+        }
+
+        textAnimation();
+    </script>
+
 
 </body>
+
+
+
+
 
 </html>
