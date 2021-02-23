@@ -1,3 +1,9 @@
+:root {
+    --main-bg-color: grey;
+    --main-fg-color: lime;
+}
+
+
 @font-face {
 	font-family: Warped;
 	src: url("fonts/SpratWarped.woff") format("woff");
@@ -22,7 +28,7 @@ html {
 
 body {
     /* margin: 0; */
-    background-color: black;
+    background-color: var(--main-bg-color);
 
 }
 
@@ -37,18 +43,18 @@ body {
 
 .title {
     font-family: 'WaxMelt';
-    background-color: lime;
+    background-color: var(--main-fg-color);
     font-size: 1.5rem;
     padding-left: 0.4%;
     padding-right: 0.4%;
     width: 50%;
-    border: solid 1px lime;
+    border: solid 1px var(--main-fg-color);
 }
 
 .info {
     font-family: 'Sinistre';
     color: white;
-    border: dashed 1px lime;
+    border: dashed 1px var(--main-fg-color);
     padding: 0.4%;
     width: 50%;
 
@@ -56,7 +62,7 @@ body {
 
 a {
     text-decoration: none;
-    color: lime;
+    color: var(--main-fg-color);
     cursor: none;
 }
 a:hover {
@@ -67,9 +73,9 @@ a:hover {
 
 .hl {
     font-family: 'WaxMelt';
-    background-color: black;
+    background-color: var(--main-bg-color);
     font-style: italic;
-    color: lime;
+    color: var(--main-fg-color);
     position: relative;
     padding-top: 1vh;
     font-size: 1vw;
