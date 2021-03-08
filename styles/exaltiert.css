@@ -21,6 +21,12 @@
 	src: url("fonts/WaxMelt-Regular.woff") format("woff");
 }
 
+@keyframes borderMove {
+    from {filter: drop-shadow(0px 0px 1px var(--main-fg-color));}
+    50% {filter: drop-shadow(2px 2px 3px var(--main-fg-color));}
+    to {filter: drop-shadow(0px 0px 1px var(--main-fg-color));}
+    }
+
 html {
     cursor: none;
     overflow: hidden;
@@ -37,38 +43,44 @@ body {
     color: white;
     background-color: blue;
     mix-blend-mode: difference;
+
 }
 
 /* YELLOW OR LIME COLORs */
 
 .title {
     font-family: 'WaxMelt';
-    background-color: var(--main-fg-color);
+    background-color: var(--main-bg-color);
+    color:  var(--main-fg-color);;
     font-size: 1.5rem;
-    padding-left: 0.4%;
-    padding-right: 0.4%;
-    width: 50%;
-    border: solid 1px var(--main-fg-color);
+    padding: 0.4%;
+    /* padding-right: 0.4%; */
+
+    /* width: 50%; */
+    box-sizing: border-box;
+    /* border: solid 1px var(--main-fg-color); */
 }
 
 .info {
     font-family: 'Sinistre';
-    color: white;
-    border: dashed 1px var(--main-fg-color);
+    color: var(--main-bg-color);
+    border: dashed 10px grey;
     padding: 0.4%;
     width: 50%;
-
 }
 
 a {
     text-decoration: none;
-    color: var(--main-fg-color);
+    color: var(--main-bg-color);
     cursor: none;
+    animation: borderMove 1s infinite linear;
+
 }
 a:hover {
-    color: white;
+    color: lime;
     filter: blur(0.4px);
     transition: linear 0.2s all;
+
 }
 
 .hl {
@@ -86,7 +98,8 @@ a:hover {
 
 .pointer {
     font-size: 2em;
-    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 5px var(--main-bg-color));
+    color: grey;
     width: 20%;
     height: 20%;
     font-family: 'WaxMelt';
@@ -104,4 +117,10 @@ a:hover {
     top: 80vh;
     left: 95vw;
     filter: blur(.2px);
+}
+
+
+.pointer, .info, a {
+    filter: drop-shadow(2px 2px 2px var(--main-fg-color));
+
 }

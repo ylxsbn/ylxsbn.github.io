@@ -13,7 +13,7 @@
 
     <div class="wrapper">
         <div class="title">
-            Exaltiert
+            <a>Exaltiert</a>
         </div>
 
         <div class="info">
@@ -23,9 +23,9 @@
         </div>
 
         <div class='hl'>
-            <a href="https://www.python.org/">[WRITTEN IN THE
-                PYTHON3]</a>-----------------------
-            <a href="">[AM, FM, &lt...&gt]</a>---------------------
+            <a href="https://www.python.org/">[WRITTEN IN THE PYTHON3]</a>
+               
+            <a href="">[AM, FM, &lt...&gt]</a>
             <a href="">[CUSTOM MATH EXPRESSION FIELD]</a>
         </div>
 
@@ -58,11 +58,11 @@
         links.forEach(element => {
             element.onmouseover = () => {
                 pointer.textContent = '???';
-                pStyle.color = 'yellow';
+                // pStyle.color = 'yellow';
             }
             element.onmouseout = () => {
                 pointer.textContent = '&-F-&';
-                pStyle.color = 'white';
+                // pStyle.color = 'white';
             }
         })
 
