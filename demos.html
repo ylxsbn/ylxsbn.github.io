@@ -1,17 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Creation of Audio Effects Using Deep Learning</title>
 	<link type="text/css" href="styles/dunkel.css" rel="stylesheet">
 </head>
+
 <body>
- <canvas></canvas>
- <script src = "scripts/dunkel.js"></script>
+	<canvas></canvas>
+	<script src="scripts/dunkel.js"></script>
 	<div class="block">
- 	<div class="text">Creation of Audio Effects Using Deep Learning</div>
-	<div class="intro">Chorus<br/>Tremolo<br/>Distortion</div>
+		<div class="title">Creation of Audio Effects Using Deep Learning</div>
+		<!-- <div class="intro">Chorus<br />Tremolo<br />Distortion</div> -->
 	</div>
+
+	<div class="abstract">
+		Classical approaches to creating audio effects are to use digital signal processing or analog
+		converters. With the help of neural networks, we can expand the creative potential and achieve new
+		sounds that are inaccessible to traditional solutions. In addition, using such algorithms, we can
+		emulate analog sound without the need to buy equipment. In this work, we implement an existing
+		solution based on the autoencoder architecture from scratch and propose a new Transformer-based
+		approach built on top of that solution. Our results show a remarkable improvement for chorus
+		and tremolo effects using a novel approach.
+	</div>
+
+	<div class="project-ref">
+		You can view the code for this project at <a href="https://github.com/ylxsbn/creation_of_audio_effects"
+			target="_blank" rel="noopener noreferrer">
+			here
+		</a>
+	</div>
+
+	<div class="table-title">
+		Demo examples
+	</div>
+
+	<table class="comparison">
+		<thead>
+			<tr class="columns">
+				<th>Clean</th>
+				<th>Target</th>
+				<th>Baseline</th>
+				<th>Audio‑MAE</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr>
+				<td colspan="5" class="chorus-label">Chorus</td>
+			</tr>
+
+			<tr>
+				<td>
+
+					<audio controls>
+						<source src="samples/test-chorus-clean-1.wav" type="audio/wav">
+					</audio>
+
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-target-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-baseline-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-audiomae-1.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-clean-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-target-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-baseline-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-audiomae-2.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-clean-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-target-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-baseline-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-audiomae-3.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-clean-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-target-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-baseline-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-chorus-audiomae-4.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="4" class="tremolo-label">Tremolo</td>
+			</tr>
+
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-clean-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-target-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-baseline-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-audiomae-1.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-clean-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-target-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-baseline-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-audiomae-2.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-clean-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-target-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-baseline-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-audiomae-3.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-clean-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-target-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-baseline-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-tremolo-audiomae-4.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td colspan="4" class="distortion-label">Distortion</td>
+			</tr>
+
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-clean-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-target-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-baseline-1.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-audiomae-1.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-clean-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-target-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-baseline-2.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-audiomae-2.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-clean-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-target-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-baseline-3.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-audiomae-3.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-clean-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-target-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-baseline-4.wav" type="audio/wav">
+					</audio>
+				</td>
+				<td>
+					<audio controls>
+						<source src="samples/test-distortion-audiomae-4.wav" type="audio/wav">
+					</audio>
+				</td>
+			</tr>
+
+
+		</tbody>
+	</table>
+
 </body>
+
 </html>

@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	background: #4C00FF;
 	image-rendering: pixelated;
-	cursor: crosshair;
+	/* cursor: crosshair; */
 }
 
 canvas {
@@ -10,8 +10,8 @@ canvas {
 	height: 100%;
 	filter:  blur(30px) contrast(100%);
 	position: absolute;
-	z-index: 5;
-	display:block;
+	z-index: -1;
+	/* display:block; */
 }
 
 @font-face {
@@ -20,25 +20,118 @@ canvas {
 
 }
 
-.text {
+.title {
 	font-family: 'Mazius';
 	font-size: 80px;
 	color: #B3FF00;
-	position:absolute;
-	left: 10vw;
-	filter:drop-shadow(0px 0px 5px #B3FF00);
+	position:relative;
+	width: 100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+	filter:drop-shadow(2px 5px 2px #3B0027);
+
+	/* filter:drop-shadow(0px 0px 5px #B3FF00); */
 }
 
-.intro {
+.abstract {
 	font-family: 'Mazius';
-	font-size: 50px;
-	color:#fe3e02;
-	position:absolute;
-	left: 10vw;
-	top: 50vh;
-	filter:drop-shadow(0px 0px 5px #fe3e02);
+	font-size: 30px;
+	color:#DBE4E6;
+	position:relative;
+	/* left: 5vw; */
+	top: 5vh;
+	width: 50%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	filter:drop-shadow(2px 5px 2px #3B0027);
+
+}
+
+.project-ref {
+	font-family: 'Mazius';
+	font-size: 30px;
+	color:#DBE4E6;
+	position:relative;
+	/* left: 5vw; */
+	top: 10vh;
+	width: 50%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	filter:drop-shadow(2px 5px 2px #3B0027);
+
+}
+
+a {
+	color: #fe3e02;
 }
 
 .block {
 	top: 15vh;
+}
+
+.comparison {
+	font-family: 'Mazius';
+	font-size: 30px;
+	color:#fe3e02;
+	position:relative;
+	/* left: 5vw; */
+	top: 15vh;
+	width: 60%;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+.columns {
+	font-family: 'Mazius';
+	font-size: 30px;
+	color:#fe3e02;
+	position:relative;
+	filter: drop-shadow(2px 5px 2px #3B0027);
+
+}
+
+
+.table-title {
+	font-family: 'Mazius';
+	font-size: 50px;
+	color:#fe3e02;
+	position:relative;
+	/* left: 5vw; */
+	top: 15vh;
+	width: 100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	filter:drop-shadow(2px 5px 2px #3B0027);
+	text-align: center;
+
+}
+
+.chorus-label {
+	font-family: 'Mazius';
+	font-size: 30px;
+	color:#FF00AA;
+	position:relative;
+	filter:drop-shadow(2px 5px 2px #3B0027);
+	/* text-shadow:  */
+	/* 5px 0px 0px #3B0027, */
+	/* 7px 0px 0px #3B0027; */
+}
+
+
+.tremolo-label {
+	font-family: 'Mazius';
+	font-size: 30px;
+	color:#7AC6E6;
+	position:relative;
+	/* filter:drop-shadow(0px 0px 2px #49E4FF); */
+	filter:drop-shadow(2px 5px 2px #3B0027);
+}
+
+.distortion-label {
+	font-family: 'Mazius';
+	font-size: 30px;
+	color:#2F0100;
+	position:relative;
+	filter:drop-shadow(0px 0px 2px #FF0400);
 }
